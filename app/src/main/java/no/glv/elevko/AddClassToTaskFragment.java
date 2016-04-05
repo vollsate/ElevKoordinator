@@ -9,7 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.core.ViewGroupAdapter;
+import no.glv.elevko.base.ViewGroupAdapter;
 import no.glv.elevko.intrfc.StudentClass;
 import no.glv.elevko.intrfc.Task;
 

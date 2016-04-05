@@ -17,11 +17,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-import no.glv.elevko.core.BaseActivity;
+import no.glv.elevko.base.BaseActivity;
 import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.core.DatePickerDialogHelper;
+import no.glv.elevko.base.DatePickerDialogHelper;
 import no.glv.elevko.core.Utils;
-import no.glv.elevko.core.ViewGroupAdapter;
+import no.glv.elevko.base.ViewGroupAdapter;
 import no.glv.elevko.intrfc.Student;
 import no.glv.elevko.intrfc.Task;
 

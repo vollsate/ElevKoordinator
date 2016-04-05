@@ -21,7 +21,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.core.DialogFragmentBase;
+import no.glv.elevko.base.DialogFragmentBase;
 import no.glv.elevko.intrfc.Student;
 import no.glv.elevko.intrfc.StudentClass;
 import no.glv.elevko.intrfc.StudentTask;

@@ -19,7 +19,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.core.ExpandableListViewBase;
+import no.glv.elevko.base.ExpandableListViewBase;
 import no.glv.elevko.core.SettingsManager;
 import no.glv.elevko.core.Utils;
 import no.glv.elevko.intrfc.Student;

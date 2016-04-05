@@ -12,7 +12,7 @@ import android.widget.EditText;
 import java.util.LinkedList;
 import java.util.List;
 
-import no.glv.elevko.core.DialogFragmentBase;
+import no.glv.elevko.base.DialogFragmentBase;
 import no.glv.elevko.intrfc.Parent;
 import no.glv.elevko.intrfc.Phone;
 import no.glv.elevko.intrfc.Student;

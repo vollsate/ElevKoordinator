@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import no.glv.elevko.InstalledClassesFragment.ClassViewConfig;
 import no.glv.elevko.LoadClassFromFileFragment.OnDataLoadedListener;
-import no.glv.elevko.core.BaseActivity;
+import no.glv.elevko.base.BaseActivity;
 import no.glv.elevko.intrfc.StudentClass;
 
 /**

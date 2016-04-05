@@ -17,6 +17,7 @@ import java.io.OutputStream;
 import java.util.Date;
 import java.util.List;
 
+import no.glv.elevko.base.BaseActivity;
 import no.glv.elevko.intrfc.Student;
 import no.glv.elevko.intrfc.StudentClass;
 import no.glv.elevko.intrfc.StudentTask;

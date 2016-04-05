@@ -18,8 +18,8 @@ import java.util.List;
 import no.glv.elevko.core.DataHandler;
 import no.glv.elevko.core.ExcelReader;
 import no.glv.elevko.core.ExcelReader.OnExcelWorkbookLoadedListener;
-import no.glv.elevko.core.LoadAndStoreASyncTask;
-import no.glv.elevko.core.LoadAndStoreASyncTask.OnStudentClassStoredListener;
+import no.glv.elevko.base.LoadAndStoreASyncTask;
+import no.glv.elevko.base.LoadAndStoreASyncTask.OnStudentClassStoredListener;
 import no.glv.elevko.intrfc.BaseValues;
 import no.glv.elevko.intrfc.StudentClass;
 

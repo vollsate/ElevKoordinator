@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.io.File;
 
-import no.glv.elevko.core.BaseFragment;
+import no.glv.elevko.base.BaseFragment;
 import no.glv.elevko.intrfc.Task;
 
 /**

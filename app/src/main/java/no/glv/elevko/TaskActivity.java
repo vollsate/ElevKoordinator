@@ -1,9 +1,7 @@
 package no.glv.elevko;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -34,11 +32,12 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-import no.glv.elevko.core.BaseActivity;
+import no.glv.elevko.base.BaseActivity;
+import no.glv.elevko.base.BaseTabActivity;
 import no.glv.elevko.core.BaseTabActivity_old;
 import no.glv.elevko.core.DataComparator;
 import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.core.DatePickerDialogHelper;
+import no.glv.elevko.base.DatePickerDialogHelper;
 import no.glv.elevko.core.Utils;
 import no.glv.elevko.intrfc.Student;
 import no.glv.elevko.intrfc.StudentTask;
@@ -57,7 +56,7 @@ import no.glv.elevko.sql.DBUtils;
  *
  * @author GleVoll
  */
-public class TaskActivity extends BaseTabActivity_old implements TaskController {
+public class TaskActivity extends BaseTabActivity implements TaskController {
 
     private BaseTabFragment[] fragments;
     TaskStudentsFragment classesFragment;
@@ -89,7 +88,6 @@ public class TaskActivity extends BaseTabActivity_old implements TaskController 
         return mTask;
     }
 
-    @Override
     protected String getTabTitle() {
         return getString( R.string.task_title );
     }
@@ -106,7 +104,6 @@ public class TaskActivity extends BaseTabActivity_old implements TaskController 
         return fragments;
     }
 
-    @Override
     public String[] getTabTitles() {
         return new String[]{ getString( R.string.task_tab_section1 ), getString( R.string.task_tab_section2 ) };
     }
@@ -242,22 +239,6 @@ public class TaskActivity extends BaseTabActivity_old implements TaskController 
         mTask.setType( iTyp );
 
         getDataHandler().updateTask( mTask, oldID ).notifyTaskUpdate( mTask );
-    }
-
-    @Override
-    public void onTabSelected( @SuppressWarnings("deprecation") ActionBar.Tab tab,
-                               FragmentTransaction fragmentTransaction ) {
-        super.onTabSelected( tab, fragmentTransaction );
-    }
-
-    @Override
-    public void onTabUnselected( @SuppressWarnings("deprecation") ActionBar.Tab tab,
-                                 FragmentTransaction fragmentTransaction ) {
-    }
-
-    @Override
-    public void onTabReselected( @SuppressWarnings("deprecation") ActionBar.Tab tab,
-                                 FragmentTransaction fragmentTransaction ) {
     }
 
     @Override

@@ -20,7 +20,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import no.glv.elevko.core.BaseActivity;
+import no.glv.elevko.base.BaseActivity;
+import no.glv.elevko.base.InstalledDataFragment;
 import no.glv.elevko.core.DataComparator;
 import no.glv.elevko.core.DataHandler;
 import no.glv.elevko.core.DataHandler.OnTasksChangedListener;

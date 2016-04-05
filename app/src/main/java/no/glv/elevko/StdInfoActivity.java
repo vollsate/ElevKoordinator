@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Locale;
 
 import no.glv.elevko.SendSMSDialog.OnVerifySendSMSListener;
-import no.glv.elevko.core.BaseActivity;
+import no.glv.elevko.base.BaseActivity;
 import no.glv.elevko.core.DataHandler;
 import no.glv.elevko.core.SettingsManager;
 import no.glv.elevko.core.Utils;

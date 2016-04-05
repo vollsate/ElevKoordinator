@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import no.glv.elevko.base.InstalledDataFragment;
 import no.glv.elevko.core.DataComparator;
 import no.glv.elevko.core.DataHandler;
 import no.glv.elevko.core.DataHandler.OnStudentClassChangeListener;
@@ -120,7 +121,7 @@ public class InstalledClassesFragment extends InstalledDataFragment<String> impl
      */
     @Override
     public Intent createIntent( String name, Context context ) {
-        return null; // StdClassListActivity.CreateActivityIntent( name, context );
+        return StdClassListActivity.CreateActivityIntent( name, context );
     }
 
     @Override
