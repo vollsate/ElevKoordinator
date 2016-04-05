@@ -14,9 +14,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
-public class BaseTabActivity extends AppCompatActivity {
+import java.util.Locale;
+
+import no.glv.elevko.core.BaseActivity;
+import no.glv.elevko.core.BaseFragment;
+import no.glv.elevko.core.DataHandler;
+
+public abstract class BaseTabActivity extends BaseActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -36,7 +46,7 @@ public class BaseTabActivity extends AppCompatActivity {
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_tabbed );
+        setContentView( getLayoutID() );
 
         Toolbar toolbar = ( Toolbar ) findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
@@ -45,7 +55,7 @@ public class BaseTabActivity extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter( getSupportFragmentManager() );
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = ( ViewPager ) findViewById( R.id.container );
+        mViewPager = ( ViewPager ) findViewById( getViewpagerID() );
         mViewPager.setAdapter( mSectionsPagerAdapter );
 
 
@@ -84,6 +94,23 @@ public class BaseTabActivity extends AppCompatActivity {
     }
 
     /**
+     * @return The R.layout ID the corresponds to a ViewPager XML element
+     */
+    public abstract int getLayoutID();
+
+    /**
+     * @return The R.id ID to the ViewPager XML element
+     */
+    public abstract int getViewpagerID();
+
+    /**
+     *
+     * @return
+     */
+    public abstract BaseTabFragment[] getFragments();
+
+
+    /**
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
@@ -118,40 +145,124 @@ public class BaseTabActivity extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * @author GleVoll
+     */
+    public abstract static class BaseTabFragment extends BaseFragment {
+
+        protected View rootView;
+        BaseTabActivity baseTabActivity;
+
+        /**
+         *
+         */
+        public final View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState ) {
+            rootView = inflater.inflate( getLayoutID(), container, false );
+            View view = doCreateView( inflater, container, savedInstanceState );
+
+            if ( view == null ) view = rootView;
+            return view;
+        }
+
+        /**
+         *
+         * @return
+         */
+        protected BaseTabActivity getBaseTabActivity() {
+            return ( BaseTabActivity ) getActivity();
+        }
+
+        /**
+         *
+         * @return
+         */
+        protected DataHandler getDataHandler() {
+            return getBaseTabActivity().getDataHandler();
+        }
+
+        /**
+         *
+         * @return
+         */
+        protected abstract int getLayoutID();
+
+        /**
+         *
+         * @param inflater
+         * @param container
+         * @param savedInstanceState
+         * @return
+         */
+        protected abstract View doCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState );
+
+        /**
+         *
+         * @param id
+         * @return
+         */
+        protected EditText getEditText( int id ) {
+            return ( EditText ) rootView.findViewById( id );
+        }
+
+        protected TextView getTextView( int id ) {
+            return ( TextView ) rootView.findViewById( id );
+        }
+
+        protected ListView getListView( int id ) {
+            return ( ListView ) rootView.findViewById( id );
+        }
+
+        protected Button getButton( int id ) {
+            return ( Button ) rootView.findViewById( id );
+        }
+
+        protected Spinner getSinner( int id ) {
+            return ( Spinner ) rootView.findViewById( id );
+        }
+    }
+
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        BaseTabFragment[] fragments;
+        String[] titles;
+        BaseTabActivity baseTabActivity;
 
         public SectionsPagerAdapter( FragmentManager fm ) {
             super( fm );
+        }
+
+        protected BaseTabActivity getBaseTabActivity() {
+            if ( baseTabActivity == null )
+                baseTabActivity = BaseTabActivity.this;
+
+            return baseTabActivity;
+        }
+        public void setFragments( BaseTabFragment[] frs ) {
+            this.fragments = frs;
         }
 
         @Override
         public Fragment getItem( int position ) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance( position + 1 );
+            //return PlaceholderFragment.newInstance( position + 1 );
+            fragments[position].baseTabActivity = getBaseTabActivity();
+            return fragments[position];
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            return fragments.length;
         }
 
         @Override
         public CharSequence getPageTitle( int position ) {
-            switch ( position ) {
-                case 0:
-                    return "SECTION 1";
-                case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
-            }
-            return null;
+            return titles[position].toUpperCase( Locale.getDefault() );
         }
     }
 }
