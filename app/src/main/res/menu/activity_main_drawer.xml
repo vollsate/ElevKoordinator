@@ -10,6 +10,10 @@
             android:id="@+id/nav_classes"
             android:icon="@drawable/ic_action_group"
             android:title="@string/nav.classes"/>
+        <item
+            android:id="@+id/nav_tasks"
+            android:icon="@drawable/ic_action_group"
+            android:title="@string/nav.tasks"/>
     </group>
 
     <item android:title="Communicate">
