@@ -1,0 +1,133 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="newAppBaseTheme" parent="@style/CustomActionBarTheme"></style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="TV.standard" parent="newAppBaseTheme">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TV.header1" parent="TV.standard">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TV.header2" parent="TV.header1">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TV.std" parent="TV.standard">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TV.std.link" parent="TV.std">
+        <item name="android:textColor">#33b5e5</item>
+    </style>
+
+    <style name="TV.std.bold" parent="TV.std">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TV.std.bold.blue" parent="TV.std.bold">
+        <item name="android:textColor">#33b5e5</item>
+    </style>
+
+    <style name="TV.std.S" parent="TV.std">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TV.std.M" parent="TV.std">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TV.std.M.bold" parent="TV.std.M">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TV.std.L" parent="TV.std">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TV.std.L.bold" parent="TV.std.L">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TV.std.L.blue" parent="TV.std.L.bold">
+        <item name="android:textColor">#33b5e5</item>
+    </style>
+
+    <style name="ET" parent="TV.standard">
+        <item name="android:gravity">left</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="ET.L" parent="ET">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ET.task" parent="ET">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10sp</item>
+    </style>
+
+    <style name="ET.stdInfo" parent="ET.L">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom|fill_horizontal</item>
+        <item name="android:layout_marginLeft">10sp</item>
+    </style>
+
+    <style name="BTN" parent="newAppBaseTheme">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+
+    <style name="BTN.addStdTask" parent="BTN">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">5sp</item>
+        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:layout_marginRight">5sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+    </style>
+
+    <style name="actionBar" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">#ffbb33</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="ProgressBar.indeterminate" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminate">true</item>
+    </style>
+
+
+</resources>

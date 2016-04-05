@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/CB.task.stdlist"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:focusable="false"
+        android:gravity="top"
+        android:textSize="40sp" />
+    
+    <TextView
+        android:id="@+id/TV.task.stdlist.name"
+        style="@style/TV.std.bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/CB.task.stdlist"
+        android:layout_toRightOf="@id/CB.task.stdlist"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Navn" />
+    
+    <TextView
+        android:id="@+id/TV.task.stdlist.ident"
+        style="@style/TV.std.S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV.task.stdlist.name"
+        android:layout_alignLeft="@+id/TV.task.stdlist.name"
+        android:layout_alignStart="@+id/TV.task.stdlist.name"
+        android:ellipsize="marquee"
+        android:text="ident"
+        android:singleLine="true"/>
+    
+    <TextView
+        android:id="@+id/TV.task.stdlist.class"
+        style="@style/TV.std.S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginLeft="10sp"
+        android:layout_alignBottom="@id/TV.task.stdlist.ident"
+        android:layout_toEndOf="@id/TV.task.stdlist.ident"
+        android:layout_toRightOf="@id/TV.task.stdlist.ident"
+        android:ellipsize="marquee"
+        android:text="Klasse"
+        android:singleLine="true"/>
+
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginLeft="2dip"
+        android:layout_marginRight="2dip"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/task_desc"
+        android:src="@drawable/delete" />
+
+    <TextView
+        android:id="@+id/TV.task.stdlist.handinDate"
+        style="@style/TV.std.M.bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CB.task.stdlist"
+        android:layout_toEndOf="@id/TV.task.stdlist.class"
+        android:layout_toRightOf="@+id/CB.task.stdlist"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="Handin: {dd.MM.yyyy}" />
+
+</RelativeLayout>

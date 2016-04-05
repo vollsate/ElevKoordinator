@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LL.classList.rowData"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_textview"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/TV.classList.name"
+            style="@style/TV.std.L.blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5sp"
+            android:layout_marginRight="5sp"
+            android:ellipsize="marquee"
+            android:hint="Klassenavn"
+            android:paddingBottom="5sp"
+            android:paddingTop="5sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/TV.classList.desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/TV.classList.name"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center|clip_horizontal|end"
+            android:layout_marginLeft="5dp"
+            android:gravity="end"
+            android:text="@string/students" />
+
+        <TextView
+            android:id="@+id/TV.classList.counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/TV.classList.desc"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/TV.classList.desc"
+            android:background="@drawable/counter_bg"
+            android:gravity="center_horizontal"
+            android:hint="-12"
+            android:textColor="@color/counter_text_color_handin" />
+    </RelativeLayout>
+
+    <View
+        style="@style/divider"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDividerAlertDialog" />
+
+</LinearLayout>

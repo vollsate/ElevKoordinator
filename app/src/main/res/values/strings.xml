@@ -1,0 +1,180 @@
+<resources>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="ok">OK</string>
+    <string name="cancel">Avbryt</string>
+
+    <!-- MAIN -->
+
+    <string name="nav.home">Hjem</string>
+    <string name="nav.classes">Klasser</string>
+    <string name="app_name">Elev koordinator</string>
+    <string name="def">To be altered</string>
+    <string name="TV.header.text">Student work flow</string>
+    <string name="TV.maininfo.text">Her kan du se hvilke klasser du har installert, og hvilke oppgaver du har startet.</string>
+    <string name="TV.installedClasses.text">Registrerte klasser</string>
+    <string name="TV.installedTasks.text">Åpne oppgaver</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_resetDB">Slett databasen</string>
+    <string name="action.resetDB.msg">Dette vil slette hele Databasen!</string>
+    <string name="action.resetDB.done">Databasen slettet!</string>
+    <string name="action_listDB">List DB</string>
+    <string name="action_loadData">Installer ny klasse</string>
+    <string name="action_newTask">Lag ny oppgave</string>
+    <string name="action_list">Elevliste</string>
+    <string name="students">elever</string>
+
+    <!-- LOAD DATA -->
+
+    <string name="loadData.loadFile.title">Les inn fra fil</string>
+    <string name="loadData.loadExcel.title">Les inn fra Excel</string>
+    <string name="loadData.installing.msg">Installerer klasse {class}</string>
+    <string name="loadData.excel.title">Velg klasse ..</string>
+    <string name="loadData.csv.title">Velg klasse ..</string>
+    <string name="loadDataInfo.title">Installere ny klasse</string>
+    <string name="loadDataInfo.menu.install">Installere ny klasse</string>
+    <string name="loadDataInfo">Her skal du finne et Excel regneark med data om din klasse. Sørg for at dataene følger korrekt oppset. Se hjelp for mer informasjon</string>
+    <string name="activity.loadData.title">Installer ny klasse</string>
+    <string name="action_writeToLocal">Lagre</string>
+    <string name="BTN.loadNewClass.text">Installer ny klasse</string>
+    <string name="BTN.loadNewTask.text">Lag en ny oppgave</string>
+    <string name="TV.task.info.text">Her lager du en ny oppgave. Husk å koble oppgaven opp mot en eller flere klasser, samt å gi en
+        korrekt innleveringsdato.
+</string>
+    <string name="title_activity_new_task">Lag en ny oppgave</string>
+    <string name="loadData.added.toast">Ny klasse [{class}] lagt til!</string>
+    <string name="activity.studentInfo.title">{elev}</string>
+
+    <!-- STUDENT CLASS LIST -->
+
+    <string name="activity.stdlist.title">Klasse {klasse}</string>
+    <string name="info_desc">Informasjon om elev</string>
+    <string name="task_desc">Se på gjeldende oppgaver</string>
+    <string name="stdlist.menu.sort">Sorter ..</string>
+    <string name="stdlist.menu.sort.lastname.asc">Etternavn, stigende</string>
+    <string name="stdlist.menu.sort.firstname.asc">Fornavn, stigende</string>
+    <string name="stdlist.menu.sms">Send SMS</string>
+    <string name="stdlist.menu.mail">Send Mail</string>
+    <string name="stdlist.del.isInvolved.msg">Klassen {class} er involvert i oppgaver {task}</string>
+    <string name="stdlist.del.isInvolved.title">Kan ikke slette</string>
+    <string name="stdlist.del.title">Slette klasse?</string>
+    <string name="stdlist.del.msg">Dette vil slette klassen {class}</string>
+    <string name="stdlist.del.done.msg">Klassen er slettet: {class}</string>
+    <string name="stdlist.mail.body">Din melding</string>
+    <string name="stdlist.mail.subject">Ditt emne</string>
+    <string name="stdList.stditem.class">Klasse: </string>
+
+    <string-array name="stdList_classes">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item></item>
+    </string-array>
+
+    <!-- STUDENT INFO -->
+
+    <string name="stdinfo_header1">Navn og epost</string>
+    <string name="stdinfo_header2">Telefonnumre</string>
+    <string name="stdinfo_name">Navn: </string>
+    <string name="stdinfo_mail">Epost: </string>
+    <string name="stdinfo_phone_mobile">Mobil: </string>
+    <string name="stdinfo_phone_home">Hjemme: </string>
+    <string name="stdinfo_phone_work">Arbeid: </string>
+    <string name="stdInfo.fName">Fornavn: </string>
+    <string name="stdInfo.lName">Etternavn: </string>
+    <string name="stdInfo.ident">Ident: </string>
+    <string name="stdInfo.birth">Født: </string>
+    <string name="stdInfo.adr">Adresse: </string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_task">TaskActivity</string>
+    <string name="std_info_title">Elev</string>
+    <string name="std_parent1_title">Foresatt 1</string>
+    <string name="std_parent2_title">Foresatt 2</string>
+    <string name="action_stdinfo_update">Oppdater</string>
+    <string name="stdInfo.header.nameAdr">Navn og adresse</string>
+    <string name="stdInfo.header.google">Google konto</string>
+    <string name="stdInfo.google"><u>{google}</u></string>
+    <string name="stdInfo.mail.desc">Send epost</string>
+    <string name="stdInfo.sms.desc">Send SMS</string>
+    <string name="stdInfo.sms.send">Send SMS til foresatt(e)</string>
+    <string name="stdInfo.call.desc">Ring</string>
+
+    <!-- NEW TASK -->
+
+    <string name="newTask.missingname.toast">Navn kan ikke være tomt!</string>
+    <string name="newTask.missingclass.toast">Du må legge til minst én klasse</string>
+    <string name="newTask.added.toast">Ny oppgave [{task}] lagt til!</string>
+    <string name="newTask.addStudents.msg">Legg til studenter ..</string>
+    <string name="newTask.header">Ny oppgave</string>
+    <string name="newTask.name">Navn</string>
+    <string name="newTask.desc">Beskrivelse</string>
+    <string name="newTask.date">Innleveringsdato</string>
+    <string name="newTask.date.hint">dd.MM.yyyy</string>
+    <string name="newTask.create">Opprett</string>
+
+    <!-- TASKS -->
+
+    <string name="task_menu_addStudent">Legg til elev</string>
+    <string name="task_menu_addClass">Legg til klasse</string>
+    <string name="task_menu_delete">Slett</string>
+    <string name="task_menu_update">Oppdater</string>
+    <string name="task_menu_close">Steng</string>
+    <string name="task.delete.msg">{task}</string>
+    <string name="task.delete.title">Vil du slette denne oppgaven?</string>
+    <string name="task_title">Oppgaver</string>
+    <string name="task_header">Info om oppgave</string>
+    <string name="task_name">Navn</string>
+    <string name="task_desca">Beskrivelse</string>
+    <string name="task_subject">Fag, skolerelatert</string>
+    <string name="task_type">Type oppgave</string>
+    <string name="task_subjecttype">Oppgave data</string>
+    <string name="task_date">Innleveringsdato</string>
+    <string name="task_classes">Involverte klasser</string>
+    <string name="task_std_delete_title">Slette student?</string>
+    <string name="task_std_delete_msg">{name}</string>
+    <string name="task_tab_section1">Info</string>
+    <string name="task_tab_section2">Elever</string>
+    <string name="task_pending">Venter ..</string>
+    <string name="task_handin"></string>
+    <string name="task_expired">Utgått..</string>
+    <string name="task_student_count">Antall elever: </string>
+    <string name="task_pending_count">Antall ikke levert: </string>
+    <string name="task_handin_count">Antall levert: </string>
+    <string name="task_student_deleted">Slettet student: {std}</string>
+    <string name="task_student_added">Lagt til student: {std}</string>
+    <string name="task_class_added">Lagt til klasse: {class}</string>
+    <string name="task_class_title">Legg til flere klasser ..</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="action_example">Example action</string>
+    <string name="task_stditem_saved">Lagret</string>
+
+    <!-- SUBJECT TYPES -->
+
+    <string name="subjectType.title">Oppgavetyper</string>
+    <string name="subjectType.info">Applikasjonen har en del forskjellige oppgavetyper installert. Hvis du ønsker å utvide
+        med flere, gjør du det her. \n\n
+
+        Alle oppgavetyper er i to kategorier: \n\t\t1) Fag/ skole og \n\t\t2) Tema.\n\n</string>
+    <string name="subjectType.TV.installed">Installerte oppgavetyper</string>
+    <string name="subjectType.TV.system">Systemets</string>
+    <string name="subjectType.TV.custom">Dine egne</string>
+    <string name="subjectType.TV.new">Opprett ny</string>
+    <string name="subjectType.TV.name">Navn</string>
+    <string name="subjectType.TV.desc">Beskrivelse</string>
+    <string name="subjectType.TV.type">Velg oppgavetype</string>
+    <string name="subjectType.BTN.create">Opprett oppgavetype</string>
+    <string name="subjectType.added">Oppgavetype lagt til</string>
+    <string name="subjectType.added.err">ERROR: \n\nKunne ikke legge til Oppgavetype!</string>
+
+</resources>

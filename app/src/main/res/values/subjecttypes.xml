@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="task_st_subjects_defaultDesc">Skolerelatert og fag</string>
+    <string name="task_st_types_defaultDesc">Type oppgave</string>
+
+    <string-array name="subjectTypes_titles">
+        <item>Tema</item>
+        <item>Fag/ skole</item>
+        </string-array>
+    
+    <string-array name="subjectTypes_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+    
+    <string-array name="task_subjects">
+        <item>Annet ..</item>
+        <item>Norsk</item>
+        <item>Matematikk</item>
+        <item>Engelsk</item>
+        <item>Naturfag</item>
+        <item>Samfunnsfag</item>
+        <item>RLE</item>
+        <item>Skole</item>
+        <item>Info</item>
+        <item>Helse</item>
+    </string-array>
+
+    <!-- First item will have the id=0, .. -->
+    <string-array name="task_types">
+        <item>Ukjent ..</item>
+        <item>Underskrift hjemme</item>
+        <item>Innføring</item>
+        <item>Ukelekse</item>
+        <item>Tegning</item>
+        <item>Tekst</item>
+        <item>Innlevering</item>
+        <item>Skolerelatert</item>
+    </string-array>
+
+</resources>

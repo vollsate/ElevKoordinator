@@ -1,0 +1,52 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="no.glv.android.stdntworkflow.TaskActivity" >
+
+    <item
+        android:id="@+id/menu.stdList.sort"
+        android:orderInCategory="10"
+        android:title="@string/stdlist.menu.sort"
+        android:icon="@drawable/ic_action_sort_by_size"
+        android:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menu.stdList.sort.lastNameAsc"
+                android:orderInCategory="1"
+                android:showAsAction="ifRoom"
+                android:title="@string/stdlist.menu.sort.lastname.asc"/>
+            <item
+                android:id="@+id/menu.stdList.sort.firstNameAsc"
+                android:orderInCategory="1"
+                android:showAsAction="ifRoom"
+                android:title="@string/stdlist.menu.sort.firstname.asc"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu.overflow"
+        android:icon="@drawable/ic_action_overflow"
+        android:orderInCategory="90"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_settings">
+        <menu>
+            <item
+                android:id="@+id/menu.stdlist.sms"
+                android:icon="@drawable/ic_action_sms"
+                android:orderInCategory="100"
+                android:title="@string/stdlist.menu.sms"
+                android:showAsAction="never"/>
+            <item
+                android:id="@+id/menu.stdlist.mail"
+                android:icon="@drawable/ic_action_mail_color"
+                android:orderInCategory="100"
+                android:title="@string/stdlist.menu.mail"
+                android:showAsAction="never"/>
+            <item
+                android:id="@+id/menu.stdlist.delete"
+                android:icon="@drawable/ic_action_discard"
+                android:orderInCategory="100"
+                android:title="Slett"
+                android:showAsAction="never"/>
+            </menu>
+    </item>
+
+</menu>

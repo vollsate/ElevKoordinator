@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LL.stdList.stditem.container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+<!--
+        <ImageView
+            android:id="@+id/IV.stdList.stditem.save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@drawable/save" />
+-->
+        <TextView
+            android:id="@+id/TV.stdList.stditem.class"
+            style="@style/TV.std.bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/stdList.stditem.class" />
+
+        <Spinner
+            android:id="@+id/SP.stdList.stditem.classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/TV.stdList.stditem.class"
+            android:layout_alignParentTop="true"
+            android:entries="@array/stdList_classes"
+            android:paddingLeft="10dp" />
+
+        <LinearLayout
+            android:id="@+id/LL.ex"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SP.stdList.stditem.classes"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="svak" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="middels" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="sterk" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/SB.stdList.stditem.strength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/LL.ex"
+            android:max="6"
+            android:layout_marginBottom="10dp" />
+    </RelativeLayout>
+
+</LinearLayout>

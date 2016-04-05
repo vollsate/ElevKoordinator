@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LL.stdList.container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/padding_stdlist_small"
+    android:paddingRight="@dimen/padding_stdlist_small" >
+
+    <TextView
+        android:id="@+id/TV.stdlist.name"
+        style="@style/TV.std.bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:ellipsize="marquee"
+        android:hint="Student name"
+        android:paddingTop="@dimen/padding_stdlist_small"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/TV.stdlist.ident"
+        style="@style/TV.std.S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TV.stdlist.name"
+        android:ellipsize="marquee"
+        android:hint="ident"
+        android:paddingBottom="@dimen/padding_stdlist_small"
+        android:singleLine="true" />
+
+    <ImageView
+        android:id="@+id/task"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/task_desc"
+        android:src="@drawable/ic_action_task" />
+
+    <TextView
+        android:id="@+id/TV.stdlist.birth"
+        style="@style/TV.std.S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/TV.stdlist.ident"
+        android:layout_below="@+id/TV.stdlist.name"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:hint="birth"
+        android:paddingBottom="@dimen/padding_stdlist_small"
+        android:singleLine="true" />
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="task_stdlist_light">#E0F0FF</color>
+    <color name="task_stdlist_dark">#CCE6FF</color>
+
+    <color name="textview_hover">#E0F0FF</color>
+    <color name="textview_pressed">#CCE6FF</color>
+
+
+    <color name="row_stdlist_pressed">#FFC266</color>
+
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#E0F0FF</color>
+    <color name="list_background_pressed">#CCE6FF</color>
+    <color name="list_divider">#272727</color>
+
+    <!-- BUTTON -->
+    <color name="button_bg">#33b5e5</color>
+    <color name="button_bg_pressed">#0800FF</color>
+
+
+    <!-- NAV DRAWER -->
+    <color name="nav_drawer_title">#ffffff</color>
+    <color name="nav_drawer_background">#669999</color>
+    <color name="nav_drawer_background_pressed">#EC583A</color>
+    <color name="nav_drawer_divider">#272727</color>
+    <color name="counter_text_bg">#C4C4C4</color>
+
+    <color name="counter_text_color_pending">#FF0000</color>
+    <color name="counter_text_color_handin">#0008FF</color>
+
+
+</resources>

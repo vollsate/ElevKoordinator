@@ -1,0 +1,310 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="no.glv.android.stdntworkflow.TaskInfoFragment" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/TV.task.header"
+            style="@style/TV.header2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/def" />
+
+        <View
+            style="@style/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TV.task.header" />
+
+        <RelativeLayout
+            android:id="@+id/LL.task.name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TV.task.header"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15sp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TV.task.name"
+                style="@style/TV.std.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/task_name" />
+
+            <EditText
+                android:id="@+id/ET.task.name"
+                style="@style/ET.L"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/TV.task.name"
+                android:layout_marginLeft="10sp"
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@id/TV.task.name"
+                android:layout_toRightOf="@id/TV.task.name"
+                android:background="@drawable/custom_edittext"
+                android:hint="@string/task_name" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LL.task.desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LL.task.name"
+            android:layout_marginLeft="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TV.task.desc"
+                style="@style/TV.std.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/task_desca" />
+
+            <EditText
+                android:id="@+id/ET.task.desc"
+                style="@style/ET.L"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:focusable="true"
+                android:minLines="2"
+                android:hint="@string/task_desca"
+                android:background="@drawable/custom_edittext"                
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL.task.subjectTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LL.task.desc"
+            android:layout_marginTop="25sp"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/TV.header2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_subjecttype" />
+
+            <View
+                style="@style/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="15sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TV.std.bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/task_subject"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    style="@style/TV.std.bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/task_type"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/SP.task.subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/task_types" />
+
+                <Spinner
+                    android:id="@+id/SP.task.type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/task_types" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL.task.date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LL.task.subjectTypes"
+            android:layout_marginLeft="@dimen/task.marginLeft"
+            android:layout_marginStart="@dimen/task.marginLeft"
+            android:layout_marginTop="20sp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TV.task.date"
+                style="@style/TV.std.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/task_date" />
+
+            <Button
+                android:id="@+id/BTN.task.date"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/task.marginLeft"
+                android:layout_marginStart="@dimen/task.marginLeft"
+                android:background="@drawable/calendar"/>
+
+            <EditText
+                android:id="@+id/ET.task.date"
+                style="@style/ET.L"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="10sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:focusable="true"
+                android:background="@drawable/custom_edittext"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL.task.stdCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@dimen/task.marginLeft"
+            android:layout_alignStart="@dimen/task.marginLeft"
+            android:layout_below="@id/LL.task.date"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TV.std.bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/task_student_count" />
+
+                <TextView
+                    android:id="@+id/TV.task.studentCount"
+                    style="@style/TV.std.L.blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginStart="5sp"
+                    android:layout_weight="0.8"
+                    android:hint="@string/task_student_count" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TV.std.bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/task_pending_count" />
+
+                <TextView
+                    android:id="@+id/TV.task.pendingCount"
+                    style="@style/TV.std.L.blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginStart="5sp"
+                    android:layout_weight="0.8"
+                    android:hint="antall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TV.std.bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/task_handin_count" />
+
+                <TextView
+                    android:id="@+id/TV.task.handinCount"
+                    style="@style/TV.std.L.blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginStart="5sp"
+                    android:layout_weight="0.8"
+                    android:hint="antall" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LL.task.stdCount"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/TV.header2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:text="@string/task_classes" />
+
+            <View
+                style="@style/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/FR.installedClasses.container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

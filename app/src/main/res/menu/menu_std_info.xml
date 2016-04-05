@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="no.glv.android.stdntworkflow.StudentInfoActivity">
+
+    <item
+        android:icon="@drawable/ic_action_edit"
+        android:id="@+id/action_std_upd"
+        android:orderInCategory="100"
+        android:title="@string/action_stdinfo_update"
+        android:showAsAction="ifRoom"/>
+
+</menu>

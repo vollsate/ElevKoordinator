@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:columnCount="2"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:rowCount="8"
+    tools:context="no.glv.android.stdntworkflow.StdInfoFragment" >
+
+    <TextView
+        android:id="@+id/TV.info.header"
+        style="@style/TV.header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:text="@string/stdInfo.header.nameAdr" />
+
+    <View
+        style="@style/divider"
+        android:layout_below="@id/TV.info.header" />
+
+    <TextView
+        android:id="@+id/TV.info.firstName"
+        style="@style/TV.std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV.info.header"
+        android:layout_marginTop="10sp"
+        android:gravity="bottom|end"
+        android:text="@string/stdInfo.fName" />
+
+    <EditText
+        android:id="@+id/ET.info.firstName"
+        style="@style/ET.stdInfo"
+        android:layout_width="fill_parent"
+        android:layout_alignBaseline="@id/TV.info.firstName"
+        android:layout_gravity="bottom|fill_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/TV.info.firstName"
+        android:layout_toEndOf="@id/TV.info.firstName"
+        android:background="@drawable/custom_edittext"
+        android:gravity="start"
+        android:hint="@string/stdInfo.fName"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/TV.info.lastName"
+        style="@style/TV.std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV.info.firstName"
+        android:layout_gravity="end"
+        android:layout_marginTop="10sp"
+        android:text="@string/stdInfo.lName" />
+
+    <EditText
+        android:id="@+id/ET.info.LastName"
+        style="@style/ET.stdInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/TV.info.lastName"
+        android:layout_alignLeft="@id/ET.info.firstName"
+        android:layout_alignStart="@id/ET.info.firstName"
+        android:layout_gravity="bottom|fill_horizontal"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:gravity="start"
+        android:hint="@string/stdInfo.lName"
+        android:background="@drawable/custom_edittext"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/TV.info.ident"
+        style="@style/TV.std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV.info.lastName"
+        android:layout_gravity="end"
+        android:layout_marginTop="10sp"
+        android:text="@string/stdInfo.ident" />
+
+    <EditText
+        android:id="@+id/ET.info.ident"
+        style="@style/ET.stdInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/TV.info.ident"
+        android:layout_alignLeft="@id/ET.info.firstName"
+        android:layout_gravity="bottom|fill_horizontal"
+        android:layout_marginLeft="0dp"
+        android:gravity="start"
+        android:background="@drawable/custom_edittext"
+        android:hint="@string/stdInfo.ident" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/TV.info.birth"
+        style="@style/TV.std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV.info.ident"
+        android:layout_gravity="end"
+        android:layout_marginTop="10sp"
+        android:text="@string/stdInfo.birth" />
+
+    <EditText
+        android:id="@+id/ET.info.birth"
+        style="@style/ET.stdInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/TV.info.birth"
+        android:layout_alignLeft="@id/ET.info.firstName"
+        android:layout_gravity="bottom|fill_horizontal"
+        android:layout_marginLeft="0dp"
+        android:ems="10"
+        android:gravity="start"
+        android:background="@drawable/custom_edittext"
+        android:hint="@string/stdInfo.birth" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/TV.info.adr"
+        style="@style/TV.std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV.info.birth"
+        android:layout_gravity="end"
+        android:layout_marginTop="10sp"
+        android:text="@string/stdInfo.adr" />
+
+    <EditText
+        android:id="@+id/ET.info.adr"
+        style="@style/ET.stdInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ET.info.firstName"
+        android:layout_below="@id/TV.info.adr"
+        android:layout_marginLeft="0dp"
+        android:background="@drawable/custom_edittext"
+        android:hint="Harestua" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/ET.info.pc"
+        style="@style/ET.stdInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/ET.info.adr"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/ET.info.adr"
+        android:background="@drawable/custom_edittext"
+        android:hint="2743" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/TV.info.googleHeader"
+        style="@style/TV.header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ET.info.adr"
+        android:layout_gravity="start"
+        android:layout_marginTop="15sp"
+        android:gravity="center"
+        android:text="@string/stdInfo.header.google" />
+
+    <View
+        style="@style/divider"
+        android:layout_below="@id/TV.info.googleHeader" />
+
+    <TextView
+        android:id="@+id/TV.info.google"
+        style="@style/TV.std.link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV.info.googleHeader"
+        android:layout_gravity="end"
+        android:layout_marginTop="10sp"
+        android:text="Google konto" />
+
+</RelativeLayout>
