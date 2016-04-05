@@ -30,9 +30,14 @@
             android:parentActivityName=".MainActivity" >
         </activity>
         <activity
-            android:name=".BaseTabActivity"
-            android:label="@string/title_activity_tabbed"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".TaskViewActivity"
+            android:label="@string/title_activity_task"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".StdClassListActivity"
+            android:label="@string/activity.stdlist.title"
+            android:parentActivityName=".MainActivity" >
         </activity>
     </application>
 
