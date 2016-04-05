@@ -1,4 +1,4 @@
-package no.glv.elevko.core;
+package no.glv.elevko.base;
 
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;

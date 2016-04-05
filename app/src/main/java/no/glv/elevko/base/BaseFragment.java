@@ -1,10 +1,12 @@
 /**
  * 
  */
-package no.glv.elevko.core;
+package no.glv.elevko.base;
 
 
 import android.support.v4.app.Fragment;
+
+import no.glv.elevko.core.DataHandler;
 
 /**
  * @author GleVoll

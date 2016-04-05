@@ -1,4 +1,4 @@
-package no.glv.elevko;
+package no.glv.elevko.base;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import no.glv.elevko.core.DataHandler.OnChangeListener;
-import no.glv.elevko.core.ViewGroupAdapter;
+import no.glv.elevko.base.ViewGroupAdapter;
 import no.glv.elevko.intrfc.BaseValues;
 
 /**

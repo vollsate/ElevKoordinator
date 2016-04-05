@@ -1,7 +1,7 @@
 /**
  * 
  */
-package no.glv.elevko.core;
+package no.glv.elevko.base;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.ImageView;
 
 import java.util.Date;
 
+import no.glv.elevko.core.DataHandler;
+import no.glv.elevko.core.Utils;
 import no.glv.elevko.intrfc.Student;
 import no.glv.elevko.intrfc.StudentClass;
 import no.glv.elevko.intrfc.Task;

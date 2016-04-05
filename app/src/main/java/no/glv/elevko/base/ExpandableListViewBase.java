@@ -1,4 +1,4 @@
-package no.glv.elevko.core;
+package no.glv.elevko.base;
 
 import android.content.Context;
 import android.view.View;

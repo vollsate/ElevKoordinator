@@ -1,4 +1,4 @@
-package no.glv.elevko.core;
+package no.glv.elevko.base;
 
 public class AlertDialogHelper {
 

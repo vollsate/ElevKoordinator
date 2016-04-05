@@ -1,7 +1,9 @@
-package no.glv.elevko.core;
+package no.glv.elevko.base;
 
 import android.os.AsyncTask;
 
+import no.glv.elevko.core.DataHandler;
+import no.glv.elevko.core.ExcelReader;
 import no.glv.elevko.intrfc.StudentClass;
 
 public class LoadAndStoreASyncTask extends AsyncTask<String, Void, StudentClass> {

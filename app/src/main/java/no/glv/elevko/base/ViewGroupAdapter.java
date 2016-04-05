@@ -1,4 +1,4 @@
-package no.glv.elevko.core;
+package no.glv.elevko.base;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
