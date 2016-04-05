@@ -13,6 +13,8 @@
 
     <string name="nav.home">Hjem</string>
     <string name="nav.classes">Klasser</string>
+    <string name="nav.tasks">Oppgaver</string>
+    <string name="nav.subtypes">Fag- og tematyper</string>
     <string name="app_name">Elev koordinator</string>
     <string name="def">To be altered</string>
     <string name="TV.header.text">Student work flow</string>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="taskview_title">fdfd</string>
+    
+    <string name="taskview_tab_open_title">Aktive</string>
+    <string name="taskview_tab_close_title">Lukkede</string>
+    <string name="taskview_tab_expire_title">Utgåtte</string>
+</resources>
