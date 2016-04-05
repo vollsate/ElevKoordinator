@@ -9,28 +9,47 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import no.glv.elevko.core.DataHandler;
+import no.glv.elevko.android.BaseActivity;
+import no.glv.elevko.app.DataHandler;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+/**
+ * The main activity. Responsible for initiating the {@link DataHandler}.
+ */
+@SuppressWarnings("deprecation")
+public class AppActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    /** Layout resource ID */
+    public static final int LAYOUT_ID = R.layout.activity_main;
+
+    /** The navigation drawer resource ID */
+    public static final int DRAWER_ID = R.id.drawer_layout;
+
+    /** Toolbar resource ID */
+    public static final int TOOLBAR_ID = R.id.toolbar;
+
+    /** Floating action button resource ID */
+    public static final int FLOAT_ACTION_BUTTON = R.id.fab;
+
+    /**
+     * Will start the entire application.
+     *
+     * @param savedInstanceState In case we need to take care of anything
+     */
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main );
-
         DataHandler.Init( getApplication() );
+        setContentView( LAYOUT_ID );
 
-        Toolbar toolbar = ( Toolbar ) findViewById( R.id.toolbar );
+        Toolbar toolbar = ( Toolbar ) findViewById( TOOLBAR_ID );
         setSupportActionBar( toolbar );
 
-        FloatingActionButton fab = ( FloatingActionButton ) findViewById( R.id.fab );
+        FloatingActionButton fab = ( FloatingActionButton ) findViewById( FLOAT_ACTION_BUTTON );
+        assert fab != null;
         fab.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick( View view ) {
@@ -38,18 +57,20 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make( view, "Replace with your own action", Snackbar.LENGTH_LONG )
                         .setAction( "Action", null ).show();
                 */
-                Intent intent = new Intent( MainActivity.this, NewTaskActivity.class );
+                Intent intent = new Intent( AppActivity.this, NewTaskActivity.class );
                 startActivity( intent );
             }
         } );
 
-        DrawerLayout drawer = ( DrawerLayout ) findViewById( R.id.drawer_layout );
+        DrawerLayout drawer = ( DrawerLayout ) findViewById( DRAWER_ID );
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close );
+        assert drawer != null;
         drawer.setDrawerListener( toggle );
         toggle.syncState();
 
         NavigationView navigationView = ( NavigationView ) findViewById( R.id.nav_view );
+        assert navigationView != null;
         navigationView.setNavigationItemSelectedListener( this );
 
         displayView( R.id.nav_home );
@@ -57,34 +78,13 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = ( DrawerLayout ) findViewById( R.id.drawer_layout );
+        DrawerLayout drawer = ( DrawerLayout ) findViewById( DRAWER_ID );
+        assert drawer != null;
         if ( drawer.isDrawerOpen( GravityCompat.START ) ) {
             drawer.closeDrawer( GravityCompat.START );
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu( Menu menu ) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate( R.menu.menu_main, menu );
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected( MenuItem item ) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if ( id == R.id.action_settings ) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected( item );
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -94,8 +94,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     *
      * @param id The menu item ID to display
+     *
      * @return true
      */
     private boolean displayView( int id ) {
@@ -109,7 +109,11 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_classes:
-                fragment = new NewClassFragment();
+                fragment = new NewGroupFragment();
+                break;
+
+            case R.id.nav_tasks:
+                intent = new Intent( this, TaskManagerActivity.class );
                 break;
         }
 
@@ -123,7 +127,8 @@ public class MainActivity extends AppCompatActivity
             startActivity( intent );
         }
 
-        DrawerLayout drawer = ( DrawerLayout ) findViewById( R.id.drawer_layout );
+        DrawerLayout drawer = ( DrawerLayout ) findViewById( DRAWER_ID );
+        assert drawer != null;
         drawer.closeDrawer( GravityCompat.START );
         return true;
     }
