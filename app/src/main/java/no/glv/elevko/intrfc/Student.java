@@ -50,9 +50,9 @@ public interface Student {
 
     int getStrength();
 
-    String getStudentClass();
+    String getGroupName();
 
-    void setStudentClass( String val );
+    void setGroupName( String val );
 
     /**
      * @return The unique identity used on It's Learning and Google

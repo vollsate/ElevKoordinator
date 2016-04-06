@@ -18,14 +18,15 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.base.ExpandableListViewBase;
-import no.glv.elevko.core.SettingsManager;
-import no.glv.elevko.core.Utils;
+import no.glv.elevko.android.BaseActivity;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.android.ExpandableListViewBase;
+import no.glv.elevko.app.SettingsManager;
+import no.glv.elevko.app.Utils;
 import no.glv.elevko.intrfc.Student;
 
 /**
- * This Adapter will list all the student in a given StudentClass. This class
+ * This Adapter will list all the student in a given Group. This class
  * will load a XML layout row: row_student_list.
  * <p/>
  * This list MUST display the first name of every student, and the
@@ -45,6 +46,8 @@ public class StudentListAdapter extends ExpandableListViewBase<Student> implemen
      **/
     private String[] baseClassNames;
 
+    private BaseActivity baseActivity;
+
     /**
      * @param students List of students to view
      */
@@ -53,6 +56,10 @@ public class StudentListAdapter extends ExpandableListViewBase<Student> implemen
 
         mSettingsManager = DataHandler.GetInstance().getSettingsManager();
         baseClassNames = context.getResources().getStringArray( R.array.stdList_classes );
+    }
+
+    public void setBaseActivity( BaseActivity ba ) {
+        this.baseActivity = ba;
     }
 
     /**
@@ -100,7 +107,7 @@ public class StudentListAdapter extends ExpandableListViewBase<Student> implemen
 
             @Override
             public void onClick( View v ) {
-                Toast.makeText( getContext(), "Will implement individual StudentTask soon..", Toast.LENGTH_LONG )
+                Toast.makeText( getContext(), "Will implement individual Assignment soon..", Toast.LENGTH_LONG )
                         .show();
             }
         } );
@@ -133,7 +140,7 @@ public class StudentListAdapter extends ExpandableListViewBase<Student> implemen
     }
 
     @Override
-    public View getGroupView( final int groupPosition, final boolean isExpanded, View convertView, final ViewGroup parent ) {
+    public View getGroupView( final int groupPosition, final boolean isExpanded, final View convertView, final ViewGroup parent ) {
         View view = getView( groupPosition, convertView, parent, isExpanded );
 
         RelativeLayout ll = ( RelativeLayout ) view.findViewById( R.id.LL_stdList_container );
@@ -142,7 +149,7 @@ public class StudentListAdapter extends ExpandableListViewBase<Student> implemen
             @Override
             public boolean onLongClick( View v ) {
                 Student std = getItem( groupPosition );
-                StdInfoActivity.StartActivity( getContext(), std );
+                StudentViewActivity.StartActivity( baseActivity, std );
 
                 return true;
             }

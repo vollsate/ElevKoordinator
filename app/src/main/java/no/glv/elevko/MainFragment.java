@@ -22,8 +22,6 @@ import no.glv.elevko.intrfc.Task;
  * Main fragment that shows the first page. This fragment will list all the
  * classes installed on the system and any open tasks.
  * <p/>
- * <p/>
- * <p/>
  * - The user may look at a class or a task - A new task may be loaded - A new
  * class may be installed
  * <p/>
@@ -59,26 +57,26 @@ public class MainFragment extends BaseFragment {
      * Will start the fragment that displays all the currently open tasks.
      */
     private void startInstalledTasksFR() {
-        InstalledTasksFragment.TaskViewConfig config = new InstalledTasksFragment.TaskViewConfig();
+        TaskListFragment.TaskViewConfig config = new TaskListFragment.TaskViewConfig();
         config.showCounterPending = true;
-        config.showCounterHandin = true;
+        config.showCounterComplete = true;
         config.showDescription = true;
         config.showExpiredDate = getDataHandler().getSettingsManager().showExpiredDate();
-        config.taskState = Task.TASK_STATE_OPEN;
+        config.taskState = Task.STATE_OPEN;
         config.sortBy = getDataHandler().getSettingsManager().getTaskSortBy();
         config.showCount = Integer.MAX_VALUE;
 
-        InstalledTasksFragment.StartFragment( getFragmentManager(), config );
+        TaskListFragment.StartFragment( getFragmentManager(), config );
     }
 
     /**
      * Will start the fragment showing the currently installed classes.
      */
     private void startInstalledGroupsFR() {
-        InstalledGroupsFragment.ClassViewConfig config = new InstalledGroupsFragment.ClassViewConfig();
+        GroupListFragment.ClassViewConfig config = new GroupListFragment.ClassViewConfig();
         config.showStudentCount = true;
 
-        InstalledGroupsFragment.StartFragment( getFragmentManager(), config );
+        GroupListFragment.StartFragment( getFragmentManager(), config );
     }
 
     @Override

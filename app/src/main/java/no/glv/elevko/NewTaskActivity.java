@@ -17,18 +17,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-import no.glv.elevko.base.BaseActivity;
-import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.base.DatePickerDialogHelper;
-import no.glv.elevko.core.Utils;
-import no.glv.elevko.base.ViewGroupAdapter;
+import no.glv.elevko.android.BaseActivity;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.android.DatePickerDialogHelper;
+import no.glv.elevko.app.Utils;
+import no.glv.elevko.android.ViewGroupAdapter;
 import no.glv.elevko.intrfc.Student;
 import no.glv.elevko.intrfc.Task;
 
 /**
  * Creates a new Task.
  * <p>
- * Uses the {@link AddClassesToTaskFragment} to collect the data.
+ * Uses the {@link AddGroupsToTaskFragment} to collect the data.
  *
  * @author GleVoll
  */
@@ -47,7 +47,7 @@ public class NewTaskActivity extends BaseActivity implements OnClickListener, On
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_new_task );
+        setContentView( R.layout.activity_task_new );
 
         // Get stored data
         if ( savedInstanceState != null ) {
@@ -70,7 +70,7 @@ public class NewTaskActivity extends BaseActivity implements OnClickListener, On
         setupSpinners();
 
         // Load the classes that may be added to the task. Will be installed in a container.
-        AddClassToTaskFragment fragment = new AddClassToTaskFragment();
+        AddGroupToTaskFragment fragment = new AddGroupToTaskFragment();
         Bundle args = new Bundle();
         args.putSerializable( Task.EXTRA_TASKNAME, task );
         ViewGroupAdapter.BeginFragmentTransaction( getSupportFragmentManager(), fragment, args, R.id.LL_newTask_classes );
@@ -176,7 +176,7 @@ public class NewTaskActivity extends BaseActivity implements OnClickListener, On
             return false;
         }
 
-        if ( task.getAddedClasses().size() == 0 ) {
+        if ( task.getAddedGroups().size() == 0 ) {
             Utils.DisplayToast( this, getString( R.string.newTask_missingclass_toast ) );
             return false;
         }

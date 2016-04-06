@@ -15,11 +15,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import no.glv.elevko.core.CSVReader;
-import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.base.DialogFragmentBase;
+import no.glv.elevko.app.CSVReader;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.android.DialogFragmentBase;
 import no.glv.elevko.intrfc.BaseValues;
-import no.glv.elevko.intrfc.StudentClass;
+import no.glv.elevko.intrfc.Group;
 
 /**
  * Will load a new class from a file. The file must contain only one class.
@@ -151,7 +151,7 @@ public class LoadClassFromFileFragment extends DialogFragmentBase
 	 *
 	 */
 	public static class LoadableFilesAdapter extends ArrayAdapter<String> implements OnClickListener,
-			no.glv.elevko.core.CSVReader.OnDataLoadedListener {
+			no.glv.elevko.app.CSVReader.OnDataLoadedListener {
 
 		private List<String> files;
 		LoadClassFromFileFragment fragment;
@@ -205,13 +205,13 @@ public class LoadClassFromFileFragment extends DialogFragmentBase
 		}
 
 		@Override
-		public void onDataLoaded( StudentClass stdClass ) {
+		public void onDataLoaded( Group stdClass ) {
 			fragment.hideProgressBar();
 			if ( stdClass == null )
 				return;
 
-			DataHandler.GetInstance().addStudentClass( stdClass );
-			DataHandler.GetInstance().notifyStudentClassAdd( stdClass );
+			DataHandler.GetInstance().addGroup( stdClass );
+			DataHandler.GetInstance().notifyGroupAdd( stdClass );
 			if ( fragment.listener != null )
 				fragment.listener.onDataLoaded( stdClass );
 
@@ -235,6 +235,6 @@ public class LoadClassFromFileFragment extends DialogFragmentBase
 	}
 
 	interface OnDataLoadedListener {
-		void onDataLoaded( StudentClass stdClass );
+		void onDataLoaded( Group stdClass );
 	}
 }

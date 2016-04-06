@@ -843,12 +843,14 @@ public class DataHandler {
     /**
      * @param task  The task that is updated.
      * @param oldID The old task ID if any
+     *
+     * @throws DBException if an error occurs
      */
     public DataHandler updateTask( Task task, Integer oldID ) {
         Log.d( TAG, "Updating task: " + task.getName() );
 
         if ( !db.updateTask( task ) )
-            throw new IllegalStateException( "Failed to update Task: " + task.getName() );
+            throw new DBException( "Failed to update Task: " + task.getName() );
 
         if ( oldID != null ) {
             installedTasks.remove( oldID );

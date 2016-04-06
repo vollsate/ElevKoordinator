@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.base.DialogFragmentBase;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.android.DialogFragmentBase;
+import no.glv.elevko.intrfc.Assignment;
+import no.glv.elevko.intrfc.Group;
 import no.glv.elevko.intrfc.Student;
-import no.glv.elevko.intrfc.StudentClass;
-import no.glv.elevko.intrfc.StudentTask;
 import no.glv.elevko.intrfc.Task;
 
 /**
@@ -104,8 +104,8 @@ public class AddStudentsToTaskFragment extends DialogFragmentBase {
 
             @Override
             public void onClick( View v ) {
-                List<StudentTask> stdTasks = mTask.getAddedStudents();
-                Iterator<StudentTask> it = stdTasks.iterator();
+                List<Assignment> stdTasks = mTask.getAddedStudents();
+                Iterator<Assignment> it = stdTasks.iterator();
                 StringBuffer sb = new StringBuffer();
                 String msg = fr.getActivity().getResources().getString( R.string.task_student_added );
 
@@ -157,13 +157,13 @@ public class AddStudentsToTaskFragment extends DialogFragmentBase {
      * @return
      */
     protected List<Student> createStudentList() {
-        List<String> mClasses = mTask.getClasses();
+        List<String> mClasses = mTask.getGroups();
         List<Student> students = new ArrayList<Student>();
 
         Iterator<String> it = mClasses.iterator();
         while ( it.hasNext() ) {
             String className = it.next();
-            StudentClass stdClass = DataHandler.GetInstance().getStudentClass( className );
+            Group stdClass = DataHandler.GetInstance().getGroup( className );
 
             Iterator<Student> itStd = stdClass.getStudents().iterator();
             while ( itStd.hasNext() ) {

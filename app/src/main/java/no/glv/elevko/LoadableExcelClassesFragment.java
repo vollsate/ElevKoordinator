@@ -15,13 +15,13 @@ import android.widget.Toast;
 import java.util.LinkedList;
 import java.util.List;
 
-import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.core.ExcelReader;
-import no.glv.elevko.core.ExcelReader.OnExcelWorkbookLoadedListener;
-import no.glv.elevko.base.LoadAndStoreASyncTask;
-import no.glv.elevko.base.LoadAndStoreASyncTask.OnStudentClassStoredListener;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.app.ExcelReader;
+import no.glv.elevko.app.ExcelReader.OnExcelWorkbookLoadedListener;
+import no.glv.elevko.android.LoadAndStoreASyncTask;
+import no.glv.elevko.android.LoadAndStoreASyncTask.OnStudentClassStoredListener;
 import no.glv.elevko.intrfc.BaseValues;
-import no.glv.elevko.intrfc.StudentClass;
+import no.glv.elevko.intrfc.Group;
 
 public class LoadableExcelClassesFragment extends LoadClassFromFileFragment implements OnExcelWorkbookLoadedListener,
 		OnStudentClassStoredListener {
@@ -43,11 +43,11 @@ public class LoadableExcelClassesFragment extends LoadClassFromFileFragment impl
 	}
 
 	@Override
-	public void onStudentClassStore( StudentClass stdClass ) {
+	public void onStudentClassStore( Group stdClass ) {
 		if ( listener != null )
 			listener.onDataLoaded( stdClass );
 
-		DataHandler.GetInstance().notifyStudentClassAdd( stdClass );
+		DataHandler.GetInstance().notifyGroupAdd( stdClass );
 		String msg = getResources().getString( R.string.loadData_added_toast );
 		msg = msg.replace( "{class}", stdClass.getName() );
 		Toast.makeText( getActivity(), msg, Toast.LENGTH_LONG ).show();
@@ -130,7 +130,7 @@ public class LoadableExcelClassesFragment extends LoadClassFromFileFragment impl
 		List<String> list = new LinkedList<String>();
 
 		for ( String name : reader.getAvailableClasses() ) {
-			if ( !DataHandler.GetInstance().getInstalledClassNames().contains( name ) )
+			if ( !DataHandler.GetInstance().getInstalledGroupNames().contains( name ) )
 				list.add( name );
 		}
 

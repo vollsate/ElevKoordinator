@@ -20,10 +20,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.base.DialogFragmentBase;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.android.DialogFragmentBase;
 import no.glv.elevko.intrfc.Student;
-import no.glv.elevko.intrfc.StudentClass;
+import no.glv.elevko.intrfc.Group;
 import no.glv.elevko.intrfc.Task;
 
 /**
@@ -143,13 +143,13 @@ public class AddedStudentsToTaskFragment extends DialogFragmentBase {
      * @return
      */
     private List<Student> createStudentList() {
-        List<String> mClasses = getTask().getClasses();
+        List<String> mClasses = getTask().getGroups();
         List<Student> students = new ArrayList<Student>();
 
         Iterator<String> it = mClasses.iterator();
         while ( it.hasNext() ) {
             String className = it.next();
-            StudentClass stdClass = DataHandler.GetInstance().getStudentClass( className );
+            Group stdClass = DataHandler.GetInstance().getGroup( className );
             students.addAll( stdClass.getStudents() );
         }
 

@@ -12,15 +12,15 @@ import android.widget.EditText;
 import java.util.LinkedList;
 import java.util.List;
 
-import no.glv.elevko.base.DialogFragmentBase;
+import no.glv.elevko.android.DialogFragmentBase;
+import no.glv.elevko.intrfc.Group;
 import no.glv.elevko.intrfc.Parent;
 import no.glv.elevko.intrfc.Phone;
 import no.glv.elevko.intrfc.Student;
-import no.glv.elevko.intrfc.StudentClass;
 
 /**
  * A dialog that can either send SMS to one {@link Phone} object or to an entire
- * {@link StudentClass}. The <tt>Phone.MOBIL</tt>.
+ * {@link Group}. The <tt>Phone.MOBIL</tt>.
  * 
  * <p>
  * The two checkboxes (if mail to an entire class is chosen), will send mail to
@@ -34,7 +34,7 @@ import no.glv.elevko.intrfc.StudentClass;
 public class SendSMSDialog extends DialogFragmentBase implements View.OnClickListener {
 
 	OnVerifySendSMSListener listener;
-	StudentClass stdClass;
+	Group stdClass;
 	Phone p;
 
 	private EditText etMsg;
@@ -163,7 +163,7 @@ public class SendSMSDialog extends DialogFragmentBase implements View.OnClickLis
 	 * @param manager
 	 * @return
 	 */
-	public static SendSMSDialog StartFragment( StudentClass stdClass, OnVerifySendSMSListener listener,
+	public static SendSMSDialog StartFragment( Group stdClass, OnVerifySendSMSListener listener,
 			FragmentManager manager ) {
 		return StartFragment( stdClass, null, listener, manager );
 	}
@@ -188,7 +188,7 @@ public class SendSMSDialog extends DialogFragmentBase implements View.OnClickLis
 	 * @param manager
 	 * @return
 	 */
-	public static SendSMSDialog StartFragment( StudentClass stdClass, Phone p, OnVerifySendSMSListener listener,
+	public static SendSMSDialog StartFragment( Group stdClass, Phone p, OnVerifySendSMSListener listener,
 			FragmentManager manager ) {
 		SendSMSDialog fragment = new SendSMSDialog(  ); // TODO: Fix phone using bundle
 

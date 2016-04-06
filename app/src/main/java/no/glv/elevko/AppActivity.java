@@ -53,10 +53,6 @@ public class AppActivity extends BaseActivity implements NavigationView.OnNaviga
         fab.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick( View view ) {
-                /*
-                Snackbar.make( view, "Replace with your own action", Snackbar.LENGTH_LONG )
-                        .setAction( "Action", null ).show();
-                */
                 Intent intent = new Intent( AppActivity.this, NewTaskActivity.class );
                 startActivity( intent );
             }
@@ -120,7 +116,7 @@ public class AppActivity extends BaseActivity implements NavigationView.OnNaviga
         if ( fragment != null ) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace( R.id.frame_container, fragment );
-            if ( id != R.id.nav_home ) ft.addToBackStack( null );
+            if ( id != R.id.nav_home ) ft.addToBackStack( null ); // Don't add the Home screen to the back stack
             ft.commit();
         }
         if ( intent != null ) {
