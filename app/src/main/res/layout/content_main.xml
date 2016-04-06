@@ -10,65 +10,69 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="no.glv.elevko.MainActivity"
+    tools:context=".AppActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/TV.header"
-            style="@style/TV.header1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/TV.header.text"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-        <TextView
-            android:id="@+id/TV.maininfo"
-            style="@style/TV.std"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:text="@string/TV.maininfo.text"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:orientation="vertical">
 
-        <!-- INSTALLED CLASSES -->
+            <TextView
+                android:id="@+id/TV.header"
+                style="@style/TV.header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TV.header.text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-        <TextView
-            android:id="@+id/TV.installedClasses"
-            style="@style/TV.header2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:text="@string/TV.installedClasses.text"/>
+            <TextView
+                android:id="@+id/TV.maininfo"
+                style="@style/TV.std"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="@string/TV.maininfo.text"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
+            <!-- INSTALLED CLASSES -->
 
-        <LinearLayout
-            android:id="@+id/FR.installedClasses.container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"/>
-
-        <!-- INSTALLED TAKSS -->
-
-        <TextView
-            android:id="@+id/TV.installedTasks"
-            style="@style/TV.header2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:text="@string/TV.installedTasks.text"/>
+            <TextView
+                android:id="@+id/TV.installedGroups"
+                style="@style/TV.header2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="@string/TV.installedClasses.text"/>
 
 
-        <LinearLayout
-            android:id="@+id/FR.installedTasks.container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            <LinearLayout
+                android:id="@+id/FR.grouplist.container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
 
-    </LinearLayout>
+            <!-- INSTALLED TAKSS -->
 
+            <TextView
+                android:id="@+id/TV.installedTasks"
+                style="@style/TV.header2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="@string/TV.installedTasks.text"/>
+
+
+            <LinearLayout
+                android:id="@+id/FR.installedTasks.container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

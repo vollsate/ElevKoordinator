@@ -3,6 +3,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="title_nav_header">Elevkoordinator</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
 
@@ -15,9 +16,9 @@
     <string name="nav.classes">Klasser</string>
     <string name="nav.tasks">Oppgaver</string>
     <string name="nav.subtypes">Fag- og tematyper</string>
-    <string name="app_name">Elev koordinator</string>
+    <string name="app_name">Elevkoordinator</string>
     <string name="def">To be altered</string>
-    <string name="TV.header.text">Student work flow</string>
+    <string name="TV.header.text">Elevkoordinator</string>
     <string name="TV.maininfo.text">Her kan du se hvilke klasser du har installert, og hvilke oppgaver du har startet.</string>
     <string name="TV.installedClasses.text">Registrerte klasser</string>
     <string name="TV.installedTasks.text">Åpne oppgaver</string>
@@ -40,7 +41,8 @@
     <string name="loadData.csv.title">Velg klasse ..</string>
     <string name="loadDataInfo.title">Installere ny klasse</string>
     <string name="loadDataInfo.menu.install">Installere ny klasse</string>
-    <string name="loadDataInfo">Her skal du finne et Excel regneark med data om din klasse. Sørg for at dataene følger korrekt oppset. Se hjelp for mer informasjon</string>
+    <string name="loadDataInfo">Her skal du finne et Excel regneark med data om din klasse. Sørg for at dataene
+        følger korrekt oppsett. Se hjelp for mer informasjon</string>
     <string name="activity.loadData.title">Installer ny klasse</string>
     <string name="action_writeToLocal">Lagre</string>
     <string name="BTN.loadNewClass.text">Installer ny klasse</string>
@@ -178,5 +180,7 @@
     <string name="subjectType.BTN.create">Opprett oppgavetype</string>
     <string name="subjectType.added">Oppgavetype lagt til</string>
     <string name="subjectType.added.err">ERROR: \n\nKunne ikke legge til Oppgavetype!</string>
+    <string name="title_activity_base_tab_activity_new">BaseTabActivity_new</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 </resources>
