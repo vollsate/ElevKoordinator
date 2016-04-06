@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".AppActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,25 +19,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewTaskActivity"
-            android:label="@string/title_activity_new_task"
-            android:parentActivityName=".MainActivity" >
+            android:name=".StudentViewActivity"
+            android:parentActivityName=".GroupViewActivity">
         </activity>
         <activity
-            android:name=".TaskActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:label="@string/title_activity_task"
-            android:parentActivityName=".MainActivity" >
+            android:name=".NewTaskActivity"
+            android:label="@string/title_activity_new_task"
+            android:parentActivityName=".AppActivity">
         </activity>
         <activity
             android:name=".TaskViewActivity"
             android:label="@string/title_activity_task"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".AppActivity"
+            android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
-            android:name=".StdClassListActivity"
+            android:name=".TaskManagerActivity"
+            android:label="@string/title_activity_task"
+            android:parentActivityName=".AppActivity">
+        </activity>
+        <activity
+            android:name=".GroupViewActivity"
             android:label="@string/activity.stdlist.title"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".AppActivity">
+        </activity>
+        <activity
+            android:name=".ActionSpinner"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 
