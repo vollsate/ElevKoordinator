@@ -23,7 +23,7 @@ public class AddGroupToTaskFragment extends ViewGroupAdapter {
 
     @Override
     public int getViewGroupLayoutID() {
-        return R.layout.grouplist_fragment;
+        return R.layout.grouplist__fragment;
     }
 
     Task getTask( Bundle args ) {

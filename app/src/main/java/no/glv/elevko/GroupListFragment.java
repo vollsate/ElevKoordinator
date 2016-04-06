@@ -67,7 +67,7 @@ public class GroupListFragment extends InstalledDataFragment<String> implements 
 
     @Override
     public int getViewGroupLayoutID() {
-        return R.layout.grouplist_fragment;
+        return R.layout.grouplist__fragment;
     }
 
     @Override
@@ -77,7 +77,7 @@ public class GroupListFragment extends InstalledDataFragment<String> implements 
 
     @Override
     public int getRowLayoutID() {
-        return R.layout.grouplist_row;
+        return R.layout.grouplist__row;
     }
 
     /**
