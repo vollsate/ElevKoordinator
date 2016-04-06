@@ -1,7 +1,7 @@
 /**
  * 
  */
-package no.glv.elevko.base;
+package no.glv.elevko.android;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import android.widget.ImageView;
 
 import java.util.Date;
 
-import no.glv.elevko.core.DataHandler;
-import no.glv.elevko.core.Utils;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.app.Utils;
+import no.glv.elevko.intrfc.Group;
 import no.glv.elevko.intrfc.Student;
-import no.glv.elevko.intrfc.StudentClass;
 import no.glv.elevko.intrfc.Task;
 
 /**
@@ -46,11 +46,11 @@ public class BaseActivity extends AppCompatActivity {
 	 * 
 	 * @return
 	 */
-	public static StudentClass GetStudentClassExtra( Intent intent ) {
+	public static Group GetStudentClassExtra( Intent intent ) {
 		Bundle bundle = intent.getExtras();
-		String className = bundle.getString( StudentClass.EXTRA_STUDENTCLASS );
+		String className = bundle.getString( Group.EXTRA_GROUP );
 
-		return DataHandler.GetInstance().getStudentClass( className );
+		return DataHandler.GetInstance().getGroup( className );
 	}
 
 	/**
@@ -64,10 +64,10 @@ public class BaseActivity extends AppCompatActivity {
 		Bundle bundle = getIntent().getExtras();
 
 		String sName = bundle.getString( Student.EXTRA_IDENT );
-		String sClass = bundle.getString( StudentClass.EXTRA_STUDENTCLASS );
+		String sClass = bundle.getString( Group.EXTRA_GROUP );
 
-		StudentClass stdClass = DataHandler.GetInstance().getStudentClass( sClass );
-		Student bean = stdClass.getStudentByIdent( sName );
+		Group stdClass = DataHandler.GetInstance().getGroup( sClass );
+		Student bean = stdClass.getStudentByID( sName );
 
 		return bean;
 	}
@@ -78,7 +78,7 @@ public class BaseActivity extends AppCompatActivity {
 	 * @param intent
 	 */
 	public static void PutStudentClassExtra( String stdClass, Intent intent ) {
-		intent.putExtra( StudentClass.EXTRA_STUDENTCLASS, stdClass );
+		intent.putExtra( Group.EXTRA_GROUP, stdClass );
 
 	}
 
@@ -131,7 +131,7 @@ public class BaseActivity extends AppCompatActivity {
 	 * @param intent
 	 */
 	public static void PutIdentExtra( Student std, Intent intent ) {
-		PutStudentClassExtra( std.getStudentClass(), intent );
+		PutStudentClassExtra( std.getGroupName(), intent );
 		PutStudentIdentExtra( std, intent );
 	}
 

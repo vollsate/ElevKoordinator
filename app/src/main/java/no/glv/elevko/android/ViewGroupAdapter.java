@@ -1,4 +1,4 @@
-package no.glv.elevko.base;
+package no.glv.elevko.android;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -56,8 +56,6 @@ public abstract class ViewGroupAdapter extends BaseFragment {
 
 	@Override
 	public final View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState ) {
-		Log.i( TAG, "onCreateView()" );
-
 		try {
 			rootView = (ViewGroup) inflater.inflate( getViewGroupLayoutID(), container, false );
 		}

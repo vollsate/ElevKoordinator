@@ -1,4 +1,4 @@
-package no.glv.elevko.base;
+package no.glv.elevko.android;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import no.glv.elevko.core.DataHandler;
+import no.glv.elevko.app.DataHandler;
 
 /**
  * A base for creating custom simple dialogs.
