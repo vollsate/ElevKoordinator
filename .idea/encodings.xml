@@ -2,47 +2,49 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/assets/harestuaskole.xls" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddClassToTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddClassesToTaskFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddGroupToTaskFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddGroupsToTaskFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddStudentsToTaskFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddedStudentsToTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/InstalledClassesFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/InstalledClassesInTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/InstalledDataFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/InstalledTasksFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/GroupListFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/GroupViewActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/InstalledGroupsInTaskFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/LoadClassFromFileFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/LoadableExcelClassesFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/MainFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/NewClassFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/NewGroupFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/NewTaskActivity.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/SendSMSDialog.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StdClassListActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StdInfoActivity.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StudentListAdapter.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StudentListAdapter.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StudentViewActivity.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/StudentListAdapter.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_task.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_std_info.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_std_info.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_stdclass_list.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskListFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskManagerActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskViewActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/android/InstalledDataFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_std_classlist.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_std_view.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task_manager.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task_new.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_sms.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_installedclasses.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_installedtasks.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_installed_tasks.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_std_view_info.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_std_view_parent2.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_student_view_parent.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_all.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_closed.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_open.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_view_students.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_loaddata_files.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_newclass.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_std_info.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_std_parent1.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_std_parent2.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_students_newtask.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_task_info.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_task_students.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_installed_class.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/grouplist_fragment.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/grouplist_row.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_installed_task.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_loaddata_files.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_newtask_addclasses.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_newtask_students.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_newtask_students.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_stdclass_list.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_stdlist_stditem.xml" charset="windows-1252" />
@@ -56,6 +58,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_stdclass_list.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu/new_task.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu/task.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/values/strings_tasks_view.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/values/subjecttypes.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/values/themes.xml" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
