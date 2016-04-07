@@ -17,7 +17,6 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/SendSMSDialog.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StudentListAdapter.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StudentViewActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskActivity.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskListFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskManagerActivity.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskViewActivity.java" charset="windows-1252" />
@@ -30,7 +29,6 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_sms.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_installed_tasks.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_std_view_info.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_std_view_parent2.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_student_view_parent.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_all.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_closed.xml" charset="windows-1252" />
@@ -51,7 +49,6 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_task_stditem.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_task_stdlist.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/row_tasks_list.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_fr_installedclasses.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_load_data.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_std_info.xml" charset="windows-1252" />

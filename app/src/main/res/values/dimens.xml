@@ -16,4 +16,8 @@
     <dimen name="padding_stdlist_small">8sp</dimen>
     <dimen name="task.marginLeft">10dp</dimen>
     <dimen name="navigation_drawer_width">240dp</dimen>
+
+
+    <dimen name="calendar_width_and_height">35dp</dimen>
+    <dimen name="padding_left_default">10dp</dimen>
 </resources>

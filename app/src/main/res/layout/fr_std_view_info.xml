@@ -30,14 +30,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/TV.info.header"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="10dp"
         android:gravity="bottom|end"
         android:text="@string/stdInfo.fName" />
 
     <EditText
         android:id="@+id/ET.info.firstName"
         style="@style/ET.stdInfo"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_alignBaseline="@id/TV.info.firstName"
         android:layout_gravity="bottom|fill_horizontal"
         android:layout_marginLeft="20dp"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/TV.info.firstName"
         android:layout_gravity="end"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="10dp"
         android:text="@string/stdInfo.lName" />
 
     <EditText

@@ -7,7 +7,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
-            tools:context="no.glv.android.stdntworkflow.NewTaskFragment">
+            tools:context=".NewTaskFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -120,9 +120,10 @@
 
             <Button
                 android:id="@+id/BTN.newTask.date"
+                android:layout_marginLeft="@dimen/padding_left_default"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/calendar_width_and_height"
+                android:layout_height="@dimen/calendar_width_and_height"
                 android:background="@drawable/calendar"/>
 
             <EditText
