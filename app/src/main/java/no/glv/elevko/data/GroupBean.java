@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package no.glv.elevko.data;
 
@@ -16,77 +16,96 @@ import no.glv.elevko.intrfc.Student;
  */
 public class GroupBean implements Group {
 
-	private String mName;
+    private String name;
 
-	private ArrayList<Student> students;
+    private int _id;
 
-	/**
-	 * 
-	 */
-	public GroupBean( String name ) {
-		students = new ArrayList<Student>();
+    private String year;
 
-		mName = name;
-	}
+    private ArrayList<Student> students;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see no.glv.elevko.core.Group#getName()
-	 */
-	@Override
-	public String getName() {
-		return mName;
-	}
+    /**
+     *
+     */
+    public GroupBean( int id ) {
+        students = new ArrayList<Student>();
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see no.glv.elevko.app.StudentClass#getSize()
-	 */
-	@Override
-	public int getSize() {
-		return students.size();
-	}
+        this._id = id;
+    }
 
-	/**
-	 * 
-	 * @param name
-	 * @return
-	 */
-	public Student getStudentByID( String name ) {
-		Student bean = null;
-		Iterator<Student> it = students.iterator();
+    /*
+     * (non-Javadoc)
+     *
+     * @see no.glv.elevko.core.Group#getName()
+     */
+    @Override
+    public String getName() {
+        return name;
+    }
 
-		while ( it.hasNext() ) {
-			bean = it.next();
-			if ( bean.getIdent().equals( name ) )
-				break;
-			else
-				bean = null;
-		}
+    /**
+     * (non-Javadoc)
+     *
+     * @see no.glv.elevko.intrfc.Group#getSize()
+     */
+    @Override
+    public int getSize() {
+        return students.size();
+    }
 
-		return bean;
-	}
+    /**
+     *
+     * @param name
+     * @return
+     */
+    public Student getStudentByID( String name ) {
+        Student bean = null;
+        Iterator<Student> it = students.iterator();
 
-	@Override
-	public void add( Student std ) {
-		students.add( std );
-	}
+        while ( it.hasNext() ) {
+            bean = it.next();
+            if ( bean.getIdent().equals( name ) )
+                break;
+            else
+                bean = null;
+        }
 
-	@Override
-	public void addAll( List<Student> list ) {
-		students.addAll( list );
-	}
+        return bean;
+    }
 
-	@Override
-	public Iterator<Student> iterator() {
-		return students.iterator();
-	}
+    @Override
+    public void add( Student std ) {
+        students.add( std );
+    }
 
-	@Override
-	public List<Student> getStudents() {
-		return students;
-	}
+    @Override
+    public void addAll( List<Student> list ) {
+        students.addAll( list );
+    }
 
+    @Override
+    public Iterator<Student> iterator() {
+        return students.iterator();
+    }
+
+    @Override
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public int get_id() {
+        return _id;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear( String year ) {
+        this.year = year;
+    }
+
+    public void setName( String name ) {
+        this.name = name;
+    }
 }

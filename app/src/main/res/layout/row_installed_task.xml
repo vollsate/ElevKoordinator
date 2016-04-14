@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/TV.task.counterPending"
@@ -126,7 +126,7 @@
 
     <View
         style="@style/divider"
-        android:layout_height="2sp"
+        android:layout_height="5dp"
         android:background="?android:attr/listDividerAlertDialog"/>
 
 </LinearLayout>

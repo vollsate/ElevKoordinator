@@ -1177,7 +1177,7 @@ public class DataHandler {
         ident = ident.replace( 'ø', 'o' );
         ident = ident.replace( 'å', 'a' );
 
-        Log.d( TAG, "Creating student ID: " + ident );
+        //Log.d( TAG, "Creating student ID: " + ident );
         return ident.toLowerCase( Locale.getDefault() );
     }
 

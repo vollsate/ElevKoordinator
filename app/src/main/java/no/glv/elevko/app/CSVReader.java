@@ -42,8 +42,9 @@ public class CSVReader extends AsyncTask<String, Void, Group> {
 
 		File externalDir = Environment.getExternalStoragePublicDirectory( Environment.DIRECTORY_DOWNLOADS );
 		String fName = externalDir.getAbsolutePath() + "/" + fileName;
-		String stdClassName = fileName.substring( 0, fileName.length() - 4 );
-		Group stdClass = new GroupBean( stdClassName );
+		String groupName = fileName.substring( 0, fileName.length() - 4 );
+		Group group = new GroupBean( ( int ) Math.random() );
+		group.setName( groupName );
 
 		try {
 			fis = new FileInputStream( new File( fName ) );
@@ -68,7 +69,7 @@ public class CSVReader extends AsyncTask<String, Void, Group> {
 
 			String stdLine;
 			while ( ( stdLine = buff.readLine() ) != null ) {
-				Student newStudent = CreateStudentFromString( stdLine, stdClassName, "dd.MM.yyyy" );
+				Student newStudent = CreateStudentFromString( stdLine, groupName, "dd.MM.yyyy" );
 				list.add( newStudent );
 			}
 		}
@@ -87,8 +88,8 @@ public class CSVReader extends AsyncTask<String, Void, Group> {
 		}
 
 		Log.v( TAG, list.toString() );
-		stdClass.addAll( list );
-		return stdClass;
+		group.addAll( list );
+		return group;
 
 	}
 

@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="no.glv.android.stdntworkflow.StdInfoFragment" >
+    tools:context="no.glv.elevko.StudentViewActivity" >
 
     <TextView
         android:id="@+id/TV.info.p1Header"
@@ -57,13 +57,13 @@
         android:layout_below="@id/TV.info.p1Name"
         android:layout_alignLeft="@id/TV.info.p1Name"
         android:layout_alignStart="@id/TV.info.p1Name"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="@string/stdinfo_mail" />
 
     <ImageView
         android:id="@+id/IV.info.p1Mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/ic_phone_size"
+        android:layout_height="@dimen/ic_phone_size"
         android:layout_alignBottom="@id/TV.info.p1Mail"
         android:layout_marginTop="10dp"
         android:layout_toLeftOf="@id/TV.info.p1Mail"
@@ -88,7 +88,7 @@
 
     </EditText>
 
-    
+
     <TextView
         android:id="@+id/TV.info.p1Header2"
         style="@style/TV.header2"
@@ -104,8 +104,8 @@
 
     <ImageView
         android:id="@+id/IV.info.mob.p1msg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/ic_phone_size"
+        android:layout_height="@dimen/ic_phone_size"
         android:layout_alignLeft="@id/IV.info.p1Mail"
         android:layout_alignStart="@id/IV.info.p1Mail"
         android:layout_below="@id/TV.info.p1Header2"
@@ -117,8 +117,8 @@
     <ImageView
         android:contentDescription="@string/stdInfo.call.desc"
         android:id="@+id/IV.info.mob.p1call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/ic_phone_size"
+        android:layout_height="@dimen/ic_phone_size"
         android:layout_alignTop="@+id/IV.info.mob.p1msg"
         android:layout_toRightOf="@+id/IV.info.mob.p1msg"
         android:layout_toEndOf="@+id/IV.info.mob.p1msg"
@@ -130,6 +130,7 @@
         style="@style/TV.std.bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
         android:layout_alignBottom="@id/IV.info.mob.p1call"
         android:layout_toRightOf="@id/IV.info.mob.p1call"
         android:layout_toEndOf="@id/IV.info.mob.p1call"
@@ -142,7 +143,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginStart="10sp"
+        android:layout_marginStart="30sp"
         android:layout_toEndOf="@id/TV.info.p1Phone.mob"
         android:layout_toRightOf="@id/TV.info.p1Phone.mob"
         android:background="@drawable/custom_edittext"
@@ -153,9 +154,9 @@
     <ImageView
         android:contentDescription="@string/stdInfo.call.desc"
         android:id="@+id/IV.info.home.p1call"
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="@dimen/ic_phone_size"
+        android:layout_height="@dimen/ic_phone_size"
         android:layout_alignLeft="@id/IV.info.mob.p1call"
         android:layout_alignStart="@id/IV.info.mob.p1call"
         android:layout_below="@id/TV.info.p1Phone.mob"
@@ -171,7 +172,7 @@
         android:layout_below="@id/TV.info.p1Phone.mob"
         android:layout_alignLeft="@id/TV.info.p1Phone.mob"
         android:layout_alignStart="@id/TV.info.p1Phone.mob"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="@string/stdinfo_phone_home" />
 
     <EditText
@@ -192,9 +193,9 @@
     <ImageView
         android:contentDescription="@string/stdInfo.call.desc"
         android:id="@+id/IV.info.work.p1call"
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="@dimen/ic_phone_size"
+        android:layout_height="@dimen/ic_phone_size"
         android:layout_alignLeft="@id/IV.info.mob.p1call"
         android:layout_alignStart="@id/IV.info.mob.p1call"
         android:layout_below="@id/TV.info.p1Phone.home"
@@ -206,7 +207,7 @@
         style="@style/TV.std.bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_below="@id/TV.info.p1Phone.home"
         android:layout_alignBottom="@+id/IV.info.work.p1call"
         android:layout_alignLeft="@id/TV.info.p1Phone.mob"

@@ -107,6 +107,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">bottom|fill_horizontal</item>
         <item name="android:layout_marginLeft">10sp</item>
+        <item name="android:maxLines">2</item>
     </style>
 
     <style name="BTN" parent="newAppBaseTheme">
@@ -130,7 +131,7 @@
 
     <style name="divider">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_height">2dp</item>
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 

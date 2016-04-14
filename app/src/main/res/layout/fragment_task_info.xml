@@ -51,6 +51,7 @@
                 android:layout_alignBaseline="@id/TV.task.name"
                 android:layout_marginLeft="10sp"
                 android:layout_marginStart="10sp"
+                android:maxLines="2"
                 android:layout_toEndOf="@id/TV.task.name"
                 android:layout_toRightOf="@id/TV.task.name"
                 android:background="@drawable/custom_edittext"
@@ -84,6 +85,7 @@
                 android:layout_marginTop="10sp"
                 android:focusable="true"
                 android:minLines="2"
+                android:maxLines="10"
                 android:hint="@string/task_desca"
                 android:background="@drawable/custom_edittext"                
                 android:inputType="textMultiLine" />

@@ -15,165 +15,164 @@ import android.widget.Toast;
 import java.util.LinkedList;
 import java.util.List;
 
-import no.glv.elevko.app.DataHandler;
-import no.glv.elevko.app.ExcelReader;
-import no.glv.elevko.app.ExcelReader.OnExcelWorkbookLoadedListener;
 import no.glv.elevko.android.LoadAndStoreASyncTask;
 import no.glv.elevko.android.LoadAndStoreASyncTask.OnStudentClassStoredListener;
+import no.glv.elevko.app.DataHandler;
+import no.glv.elevko.app.ExcelReaderAsync;
+import no.glv.elevko.app.ExcelReaderAsync.OnExcelWorkbookLoadedListener;
 import no.glv.elevko.intrfc.BaseValues;
 import no.glv.elevko.intrfc.Group;
 
 public class LoadableExcelClassesFragment extends LoadClassFromFileFragment implements OnExcelWorkbookLoadedListener,
-		OnStudentClassStoredListener {
+        OnStudentClassStoredListener {
 
-	public static final String PARAM_FILENAME = BaseValues.EXTRA_BASEPARAM + "fileName";
+    public static final String PARAM_FILENAME = BaseValues.EXTRA_BASEPARAM + "fileName";
 
-	OnDataLoadedListener listener;
-	ExcelReader reader;
+    OnDataLoadedListener listener;
+    ExcelReaderAsync reader;
 
 
-	@Override
-	public void onCreate( Bundle savedInstanceState ) {
-		super.onCreate( savedInstanceState );
-	}
+    @Override
+    public void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+    }
 
-	@Override
-	protected int getTitle() {
-		return R.string.loadData_excel_title;
-	}
+    @Override
+    protected int getTitle() {
+        return R.string.loadData_excel_title;
+    }
 
-	@Override
-	public void onStudentClassStore( Group stdClass ) {
-		if ( listener != null )
-			listener.onDataLoaded( stdClass );
+    @Override
+    public void onStudentClassStore( Group stdClass ) {
+        if ( listener != null )
+            listener.onDataLoaded( stdClass );
 
-		DataHandler.GetInstance().notifyGroupAdd( stdClass );
-		String msg = getResources().getString( R.string.loadData_added_toast );
-		msg = msg.replace( "{class}", stdClass.getName() );
-		Toast.makeText( getActivity(), msg, Toast.LENGTH_LONG ).show();
+        DataHandler.GetInstance().notifyGroupAdd( stdClass );
+        String msg = getResources().getString( R.string.loadData_added_toast );
+        msg = msg.replace( "{class}", stdClass.getName() );
+        Toast.makeText( getActivity(), msg, Toast.LENGTH_LONG ).show();
 
-		finish();
-	}
+        finish();
+    }
 
-	void startStoreStudentClass( String fileName ) {
-		showProgressBar();
-		
-		String msg = getResources().getString( R.string.loadData_installing_msg ).replace( "{class}", fileName );
-		getDialog().setTitle( msg );
+    void startStoreStudentClass( String fileName ) {
+        showProgressBar();
 
-		LoadAndStoreASyncTask las = new LoadAndStoreASyncTask( reader, this );
-		las.execute( fileName );
-	}
+        String msg = getResources().getString( R.string.loadData_installing_msg ).replace( "{class}", fileName );
+        getDialog().setTitle( msg );
 
-	/**
-	 * 
-	 */
-	@Override
-	public void onWorkbookLoaded( List<String> fileNames ) {
-		buildButton( getRootView() );
-		buildAdapter( getRootView() );
+        LoadAndStoreASyncTask las = new LoadAndStoreASyncTask( reader, this );
+        las.execute( fileName );
+    }
 
-		hideProgressBar();
-	}
+    /**
+     *
+     */
+    @Override
+    public void onWorkbookLoaded( List<String> fileNames ) {
+        buildButton( getRootView() );
+        buildAdapter( getRootView() );
 
-	@Override
-	protected void buildView( View rootView ) {
-		showProgressBar();
+        hideProgressBar();
+    }
 
-		Bundle args = getArguments();
-		String fileName;
-		if ( args != null ) {
-			fileName = args.getString( PARAM_FILENAME );
-		}
-		else {
-			fileName = null;
-		}
+    @Override
+    protected void buildView( View rootView ) {
+        showProgressBar();
 
-		reader = new ExcelReader( getActivity(), fileName, this );
-		reader.execute( new Void[] { null } );
-	}
+        Bundle args = getArguments();
+        String fileName;
+        if ( args != null ) {
+            fileName = args.getString( PARAM_FILENAME );
+        } else {
+            fileName = null;
+        }
 
-	/**
-	 * 
-	 * @param rootView
-	 */
-	private void buildButton( View rootView ) {
-		Button btn = getButton();
-		btn.setVisibility( View.VISIBLE );
-		btn.setOnClickListener( new OnClickListener() {
+        reader = new ExcelReaderAsync( getActivity(), fileName, this );
+        reader.execute( new Void[]{null} );
+    }
 
-			@Override
-			public void onClick( View v ) {
-				LoadableExcelClassesFragment.this.finish();
-			}
-		} );
-	}
+    /**
+     *
+     * @param rootView
+     */
+    private void buildButton( View rootView ) {
+        Button btn = getButton();
+        btn.setVisibility( View.VISIBLE );
+        btn.setOnClickListener( new OnClickListener() {
 
-	/**
-	 * 
-	 * @param rootView
-	 */
-	private void buildAdapter( View rootView ) {
-		List<String> list = createFileList();
+            @Override
+            public void onClick( View v ) {
+                LoadableExcelClassesFragment.this.finish();
+            }
+        } );
+    }
 
-		ListView listView = getListView();
-		LoadableFilesAdapter adapter = new LoadableFilesAdapter( getActivity(), R.id.LV_loadData_filesList, list );
-		adapter.fragment = this;
-		listView.setAdapter( adapter );
-	}
+    /**
+     *
+     * @param rootView
+     */
+    private void buildAdapter( View rootView ) {
+        List<String> list = createFileList();
 
-	/**
-	 * 
-	 * @return
-	 */
-	private List<String> createFileList() {
-		List<String> list = new LinkedList<String>();
+        ListView listView = getListView();
+        LoadableFilesAdapter adapter = new LoadableFilesAdapter( getActivity(), R.id.LV_loadData_filesList, list );
+        adapter.fragment = this;
+        listView.setAdapter( adapter );
+    }
 
-		for ( String name : reader.getAvailableClasses() ) {
-			if ( !DataHandler.GetInstance().getInstalledGroupNames().contains( name ) )
-				list.add( name );
-		}
+    /**
+     *
+     * @return
+     */
+    private List<String> createFileList() {
+        List<String> list = new LinkedList<String>();
 
-		return list;
-	}
+        for ( String name : reader.getAvailableGroups() ) {
+            if ( !DataHandler.GetInstance().getInstalledGroupNames().contains( name ) )
+                list.add( name );
+        }
 
-	/**
-	 * 
-	 * @author GleVoll
-	 *
-	 */
-	public static class LoadableFilesAdapter extends ArrayAdapter<String> implements OnClickListener {
+        return list;
+    }
 
-		LoadableExcelClassesFragment fragment;
+    /**
+     *
+     * @author GleVoll
+     *
+     */
+    public static class LoadableFilesAdapter extends ArrayAdapter<String> implements OnClickListener {
 
-		public LoadableFilesAdapter( Context context, int resource, List<String> objects ) {
-			super( context, resource, objects );
-		}
+        LoadableExcelClassesFragment fragment;
 
-		/**
-		 * 
-		 */
-		@Override
-		public View getView( int position, View convertView, ViewGroup parent ) {
-			LayoutInflater inflater = (LayoutInflater) getContext().getSystemService( Context.LAYOUT_INFLATER_SERVICE );
-			if ( convertView == null ) {
-				convertView = inflater.inflate( R.layout.row_loaddata_files, parent, false );
-			}
+        public LoadableFilesAdapter( Context context, int resource, List<String> objects ) {
+            super( context, resource, objects );
+        }
 
-			String file = getItem( position );
+        /**
+         *
+         */
+        @Override
+        public View getView( int position, View convertView, ViewGroup parent ) {
+            LayoutInflater inflater = ( LayoutInflater ) getContext().getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+            if ( convertView == null ) {
+                convertView = inflater.inflate( R.layout.row_loaddata_files, parent, false );
+            }
 
-			TextView textView = (TextView) convertView.findViewById( R.id.TV_loadData_fileName );
-			textView.setTag( file );
-			textView.setText( file );
-			textView.setOnClickListener( this );
+            String file = getItem( position );
 
-			return convertView;
-		}
+            TextView textView = ( TextView ) convertView.findViewById( R.id.TV_loadData_fileName );
+            textView.setTag( file );
+            textView.setText( file );
+            textView.setOnClickListener( this );
 
-		@Override
-		public void onClick( View v ) {
-			fragment.startStoreStudentClass( v.getTag().toString() );
-		}
-	}
+            return convertView;
+        }
+
+        @Override
+        public void onClick( View v ) {
+            fragment.startStoreStudentClass( v.getTag().toString() );
+        }
+    }
 
 }

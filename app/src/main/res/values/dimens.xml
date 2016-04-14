@@ -20,4 +20,6 @@
 
     <dimen name="calendar_width_and_height">35dp</dimen>
     <dimen name="padding_left_default">10dp</dimen>
+
+    <dimen name="ic_phone_size">32dp</dimen>
 </resources>

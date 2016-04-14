@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:rowCount="8"
-    tools:context="no.glv.android.stdntworkflow.StdInfoFragment" >
+    tools:context="no.glv.elevko.StudentViewActivity" >
 
     <TextView
         android:id="@+id/TV.info.header"
@@ -37,7 +37,7 @@
     <EditText
         android:id="@+id/ET.info.firstName"
         style="@style/ET.stdInfo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_alignBaseline="@id/TV.info.firstName"
         android:layout_gravity="bottom|fill_horizontal"
         android:layout_marginLeft="20dp"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/TV.info.firstName"
         android:layout_gravity="end"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="@string/stdInfo.lName" />
 
     <EditText
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/TV.info.lastName"
         android:layout_gravity="end"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="@string/stdInfo.ident" />
 
     <EditText
@@ -109,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/TV.info.ident"
         android:layout_gravity="end"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="@string/stdInfo.birth" />
 
     <EditText

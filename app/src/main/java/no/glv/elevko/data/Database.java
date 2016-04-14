@@ -22,6 +22,8 @@ import no.glv.elevko.intrfc.Task;
  * throw an exception is somebody tries to instantiate the database more than
  * once.
  *
+ * <p>This is the local storage on the users phone.</p>
+ *
  * @author glevoll
  */
 public class Database extends SQLiteOpenHelper {
