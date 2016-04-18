@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:rowCount="8"
-    tools:context="no.glv.elevko.StudentViewActivity" >
+    tools:context="no.glv.paco.StudentViewActivity" >
 
     <TextView
         android:id="@+id/TV.info.header"

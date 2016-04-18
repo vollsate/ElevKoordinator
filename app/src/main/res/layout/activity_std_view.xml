@@ -3,5 +3,5 @@
     android:id="@+id/VP.stdInfo.pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="no.glv.elevko.StudentViewActivity">
+    tools:context="no.glv.paco.StudentViewActivity">
 </android.support.v4.view.ViewPager>

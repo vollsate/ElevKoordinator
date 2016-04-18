@@ -2,25 +2,25 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/assets/harestuaskole.xls" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddGroupToTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddGroupsToTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddStudentsToTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/AddedStudentsToTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/GroupListFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/GroupViewActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/InstalledGroupsInTaskFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/LoadClassFromFileFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/LoadableExcelClassesFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/MainFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/NewGroupFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/NewTaskActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/SendSMSDialog.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StudentListAdapter.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/StudentViewActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskListFragment.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskManagerActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/TaskViewActivity.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/elevko/android/InstalledDataFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/AddGroupToTaskFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/AddGroupsToTaskFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/AddStudentsToTaskFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/AddedStudentsToTaskFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/GroupListFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/GroupViewActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/InstalledGroupsInTaskFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/LoadClassFromFileFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/LoadableExcelClassesFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/MainFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/NewGroupFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/NewTaskActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/SendSMSDialog.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/StudentListAdapter.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/StudentViewActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/TaskListFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/TaskManagerActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/TaskViewActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/no/glv/paco/android/InstalledDataFragment.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_std_classlist.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_std_view.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task.xml" charset="windows-1252" />
@@ -30,6 +30,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_installed_tasks.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_std_view_info.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_student_view_parent.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_student_view_parent2.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_all.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_closed.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fr_task_manager_open.xml" charset="windows-1252" />

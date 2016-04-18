@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="no.glv.elevko"
+<manifest package="no.glv.paco"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AppActivity"
+            android:name="no.glv.paco.AppActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,32 +19,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StudentViewActivity"
-            android:parentActivityName=".GroupViewActivity">
+            android:name="no.glv.paco.StudentViewActivity"
+            android:parentActivityName="no.glv.paco.GroupViewActivity">
         </activity>
         <activity
-            android:name=".NewTaskActivity"
+            android:name="no.glv.paco.NewTaskActivity"
             android:label="@string/title_activity_new_task"
-            android:parentActivityName=".AppActivity">
+            android:parentActivityName="no.glv.paco.AppActivity">
         </activity>
         <activity
-            android:name=".TaskViewActivity"
+            android:name="no.glv.paco.TaskViewActivity"
             android:label="@string/title_activity_task"
-            android:parentActivityName=".AppActivity"
+            android:parentActivityName="no.glv.paco.AppActivity"
             android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
-            android:name=".TaskManagerActivity"
+            android:name="no.glv.paco.TaskManagerActivity"
             android:label="@string/title_activity_task"
-            android:parentActivityName=".AppActivity">
+            android:parentActivityName="no.glv.paco.AppActivity">
         </activity>
         <activity
-            android:name=".GroupViewActivity"
+            android:name="no.glv.paco.GroupViewActivity"
             android:label="@string/activity.stdlist.title"
-            android:parentActivityName=".AppActivity">
+            android:parentActivityName="no.glv.paco.AppActivity">
         </activity>
         <activity
-            android:name=".ActionSpinner"
+            android:name="no.glv.paco.ActionSpinner"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
