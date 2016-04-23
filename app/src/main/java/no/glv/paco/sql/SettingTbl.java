@@ -1,4 +1,4 @@
-package no.glv.paco.data;
+package no.glv.paco.sql;
 
 import android.content.ContentValues;
 import android.database.Cursor;

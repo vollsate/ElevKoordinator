@@ -1,4 +1,4 @@
-package no.glv.paco.data;
+package no.glv.paco.sql;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -11,6 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import no.glv.paco.beans.GroupBean;
 import no.glv.paco.intrfc.Group;
 
 /**

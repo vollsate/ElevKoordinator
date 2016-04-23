@@ -12,11 +12,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import no.glv.paco.data.DBUtils;
-import no.glv.paco.data.GroupBean;
-import no.glv.paco.data.ParentBean;
-import no.glv.paco.data.PhoneBean;
-import no.glv.paco.data.StudentBean;
+import no.glv.paco.sql.DBUtils;
+import no.glv.paco.beans.GroupBean;
+import no.glv.paco.beans.ParentBean;
+import no.glv.paco.beans.PhoneBean;
+import no.glv.paco.beans.StudentBean;
 import no.glv.paco.intrfc.Group;
 import no.glv.paco.intrfc.Parent;
 import no.glv.paco.intrfc.Phone;

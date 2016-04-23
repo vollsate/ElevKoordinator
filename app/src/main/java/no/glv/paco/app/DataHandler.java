@@ -16,8 +16,9 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import no.glv.paco.R;
-import no.glv.paco.data.Database;
-import no.glv.paco.data.SubjectTypeBean;
+import no.glv.paco.sql.DBException;
+import no.glv.paco.sql.Database;
+import no.glv.paco.beans.SubjectTypeBean;
 import no.glv.paco.intrfc.Assignment;
 import no.glv.paco.intrfc.BaseValues;
 import no.glv.paco.intrfc.Group;

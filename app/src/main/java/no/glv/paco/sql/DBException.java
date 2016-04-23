@@ -1,4 +1,4 @@
-package no.glv.paco.app;
+package no.glv.paco.sql;
 
 public class DBException extends RuntimeException {
 

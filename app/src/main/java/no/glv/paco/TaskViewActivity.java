@@ -38,7 +38,7 @@ import no.glv.paco.android.DatePickerDialogHelper;
 import no.glv.paco.app.DataComparator;
 import no.glv.paco.app.DataHandler;
 import no.glv.paco.app.Utils;
-import no.glv.paco.data.DBUtils;
+import no.glv.paco.sql.DBUtils;
 import no.glv.paco.intrfc.Assignment;
 import no.glv.paco.intrfc.Student;
 import no.glv.paco.intrfc.SubjectType;

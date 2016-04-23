@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.List;
 
 import no.glv.paco.app.ExcelReader;
-import no.glv.paco.data.CloudSQLDatabase;
+import no.glv.paco.gsql.CloudSQLDatabase;
 import no.glv.paco.intrfc.Group;
 
 /**
@@ -27,6 +27,10 @@ public class InstallGroups {
                 "pacu",
                 "123456" );
 
-        //database.insertGroup( groups.get( 0 ) );
+        System.out.println( database );
+
+        database.initDatabase();
+
+        database.insertGroup( groups.get( 0 ) );
     }
 }

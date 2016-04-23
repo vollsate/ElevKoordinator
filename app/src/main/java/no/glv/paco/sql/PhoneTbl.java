@@ -1,4 +1,4 @@
-package no.glv.paco.data;
+package no.glv.paco.sql;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -9,6 +9,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+import no.glv.paco.beans.PhoneBean;
 import no.glv.paco.intrfc.Phone;
 
 /**

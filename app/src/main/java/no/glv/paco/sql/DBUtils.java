@@ -1,4 +1,4 @@
-package no.glv.paco.data;
+package no.glv.paco.sql;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package no.glv.paco.data;
+package no.glv.paco.sql;
 
 import android.content.Context;
 import android.database.SQLException;
@@ -8,7 +8,8 @@ import android.util.Log;
 
 import java.util.List;
 
-import no.glv.paco.app.DBException;
+import no.glv.paco.beans.SubjectTypeBean;
+import no.glv.paco.beans.TaskImpl;
 import no.glv.paco.intrfc.Assignment;
 import no.glv.paco.intrfc.Group;
 import no.glv.paco.intrfc.Parent;
@@ -288,7 +289,7 @@ public class Database extends SQLiteOpenHelper {
      * @return a new Task instance
      */
     public Task createNewTask() {
-        return new TaskImpl();
+        return new TaskImpl( -1 );
     }
 
     /**
